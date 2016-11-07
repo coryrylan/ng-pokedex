@@ -1,0 +1,35 @@
+<div *ngIf="(pokemon | async)?.id">
+	<div class="flex-row">
+		<div class="col-5 col-4@md">
+			<div class="card">
+				<i [class]="'sprite sprite-' + (pokemon | async)?.id"></i>
+			</div>
+		</div>
+		<div class="col-7 col-8@md">
+			<h1>{{(pokemon | async)?.name}}</h1>
+			<strong>Number:</strong> {{(pokemon | async)?.id}} <br />
+			<strong>Height:</strong> {{(pokemon | async)?.height}}<br />
+			<strong>Weight:</strong> {{(pokemon | async)?.weight}}
+		</div>
+	</div>
+	<div class="flex-row">
+		<div class="col">
+			<p>
+				<strong>Types:</strong>
+				<span *ngFor="let type of (pokemon | async)?.types">
+          {{type.type.name}} 
+        </span>
+			</p>
+			<p>
+				<strong>Moves:</strong>
+				<span *ngFor="let move of (pokemon | async)?.moves">
+          {{move.move.name}} 
+        </span>
+			</p>
+
+			<!--<pre>
+				{{pokemon | async | json}}
+			</pre>-->
+		</div>
+	</div>
+</div>

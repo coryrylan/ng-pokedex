@@ -1,0 +1,82 @@
+@import '../../styles/_config';
+
+.modal-background {
+  display:  none;
+
+  @media (min-width: 620px) {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0, 0.4);
+  }
+}
+
+.modal {
+  position: fixed;
+  overflow-x: hidden; 
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  will-change: scroll-position;
+
+  &__inner {
+    min-height: 110vh;
+    width: 100%;
+    max-width: 2500px;
+    margin: 0 auto;
+    background-color: $color-body;
+    z-index: 2;
+    position: relative;
+    overflow: visible;
+
+    @media (min-width: 720px) {
+      width: 92%;
+    }
+
+    @media (min-width: 1024px) {
+      width: 88%;
+    }
+  }
+
+  &__header {
+    background-color: $color-pokedex-red;
+  }
+
+  &__view {
+    padding: 12px;
+  }
+
+  &__btn {
+    text-decoration: none;
+    display: block;
+    float: right;
+    padding: 12px 18px;
+    font-size: 1.2em;
+    color: $color-white;
+    border: 0;
+    background: transparent;
+    width: 55px;
+
+    img {
+      width: 20px;
+    }
+    
+    &:hover {
+      background-color: lighten($color-pokedex-red, 8%);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .expand-btn {
+      display: none;
+    }
+  }
+}

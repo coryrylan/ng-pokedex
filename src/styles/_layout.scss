@@ -1,0 +1,73 @@
+@import './_config';
+
+body {
+  background-color: $color-body;
+}
+
+main {
+  display: flex;
+  min-height: 93vh;
+  flex-direction: column;
+}
+
+$pokeball-size: 12rem;
+
+/* Credit to: https://codepen.io/boltaway/pen/BjyFb */
+.pokeball {
+  $pokeball-half: $pokeball-size / -2;
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.3), transparent),  radial-gradient(circle at bottom right, rgba(0,0,0,0.1), transparent),
+linear-gradient(lighten(desaturate($color-pokedex-red, 5%), 2%) 50%, $color-white 49%);
+  background: linear-gradient(lighten(desaturate($color-pokedex-red, 5%), 2%) 50%, $color-white 49%);
+  border-radius: 50%;
+  height: $pokeball-size;
+  left: 50%;
+  margin: $pokeball-half 0 0 $pokeball-half;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  width: $pokeball-size;
+
+  &::before {
+    background: #4c4c4c;
+    content: '';
+    display: block;
+    height: $pokeball-size / 8;
+    margin-top: $pokeball-size / -16;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+  }
+
+  &::after {
+    $pokeball-inner-half: $pokeball-size / -12;
+    background: $color-white;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 .25rem $color-white, inset 0 0 0 .5rem #4c4c4c, 0 0 0 1rem #4c4c4c;
+    content: '';
+    display: block;
+    height: $pokeball-size / 6;
+    left: 50%;
+    margin: $pokeball-inner-half 0 0 $pokeball-inner-half;
+    position: absolute;
+    top: 50%;
+    width: $pokeball-size / 6;
+  }
+}
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+.pokeball.spin {
+  -webkit-animation: spin 4s infinite linear;
+  animation: spin 4s infinite linear;
+}
