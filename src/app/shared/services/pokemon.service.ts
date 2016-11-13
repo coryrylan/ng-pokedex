@@ -7,7 +7,7 @@ import 'rxjs/add/observable/forkJoin';
 import 'rxjs/add/operator/map';
 
 import { Pokemon } from '../interfaces/pokemon';
-import { testPokemon, testSinglePokemon } from './../data';
+import { pokemonData } from './../data';
 
 @Injectable()
 export class PokemonService {
@@ -16,7 +16,7 @@ export class PokemonService {
   private store: { pokemon: any[] };
 
   constructor(private http: Http) {
-    this.store = { pokemon: testPokemon };
+    this.store = { pokemon: pokemonData };
     this._pokemon = new BehaviorSubject(Object.assign({}, this.store).pokemon);
     this.pokemon = this._pokemon.asObservable().map(pokemon => {
       pokemon.forEach(p => {
@@ -34,24 +34,24 @@ export class PokemonService {
     this.emitStore();
   }
 
-  load(id: number) {
-    let notFound = true;
+  // load(id: number) {
+  //   let notFound = true;
 
-    Observable.of(testSinglePokemon).subscribe(data => {
-      this.store.pokemon.forEach((item, index) => {
-        if (item.id === data.id) {
-          this.store.pokemon[index] = data;
-          notFound = false;
-        }
-      });
+  //   Observable.of(testSinglePokemon).subscribe(data => {
+  //     this.store.pokemon.forEach((item, index) => {
+  //       if (item.id === data.id) {
+  //         this.store.pokemon[index] = data;
+  //         notFound = false;
+  //       }
+  //     });
 
-      if (notFound) {
-        this.store.pokemon.push(data);
-      }
+  //     if (notFound) {
+  //       this.store.pokemon.push(data);
+  //     }
 
-      this.emitStore();
-    });
-  }
+  //     this.emitStore();
+  //   });
+  // }
 
   private parseId(pokemon: Pokemon) {
     if (!pokemon['id']) {

@@ -1,107 +1,155 @@
-export const testSinglePokemon = {
-  id: 1,
-  name: 'bulbasaur',
-  base_experience: 64,
-  height: 7,
-  is_default: true,
-  order: 1,
-  weight: 69,
-  abilities: [
-    {
-      is_hidden: true,
-      slot: 3,
-      ability: {
-        name: 'chlorophyll',
-        url: 'http://pokeapi.co/api/v2/ability/34/'
-      }
-    }
-  ],
-  forms: [
-    {
-      name: 'bulbasaur',
-      url: 'http://pokeapi.co/api/v2/pokemon-form/1/'
-    }
-  ],
-  game_indices: [
-    {
-      game_index: 1,
-      version: {
-        name: 'white-2',
-        url: 'http://pokeapi.co/api/v2/version/22/'
-      }
-    }
-  ],
-  held_items: [],
-  location_area_encounters: [],
-  moves: [
-    {
-      move: {
-        name: 'captivate',
-        url: 'http://pokeapi.co/api/v2/move/445/'
-      },
-      version_group_details: [
-        {
-          level_learned_at: 0,
-          version_group: {
-            name: 'heartgold-soulsilver',
-            url: 'http://pokeapi.co/api/v2/version-group/10/'
-          },
-          move_learn_method: {
-            name: 'machine',
-            url: 'http://pokeapi.co/api/v2/move-learn-method/4/'
-          }
-        },
-        {
-          level_learned_at: 0,
-          version_group: {
-            name: 'platinum',
-            url: 'http://pokeapi.co/api/v2/version-group/9/'
-          },
-          move_learn_method: {
-            name: 'machine',
-            url: 'http://pokeapi.co/api/v2/move-learn-method/4/'
-          }
-        },
-        {
-          level_learned_at: 0,
-          version_group: {
-            name: 'diamond-pearl',
-            url: 'http://pokeapi.co/api/v2/version-group/8/'
-          },
-          move_learn_method: {
-            name: 'machine',
-            url: 'http://pokeapi.co/api/v2/move-learn-method/4/'
-          }
-        }
-      ]
-    }
-  ],
-  species: {
-    name: 'bulbasaur',
-    url: 'http://pokeapi.co/api/v2/pokemon-species/1/'
-  },
-  stats: [
-    {
-      base_stat: 45,
-      effort: 0,
-      stat: {
-        name: 'speed',
-        url: 'http://pokeapi.co/api/v2/stat/6/'
-      }
-    }
-  ],
-  types: [
-    {
-      slot: 2,
-      type: {
-        name: 'poison',
-        url: 'http://pokeapi.co/api/v2/type/4/'
-      }
-    }
-  ]
-};
-
-export const testPokemon = [
-  {url:"http://pokeapi.co/api/v2/pokemon/1/",name:"bulbasaur"},{url:"http://pokeapi.co/api/v2/pokemon/2/",name:"ivysaur"},{url:"http://pokeapi.co/api/v2/pokemon/3/",name:"venusaur"},{url:"http://pokeapi.co/api/v2/pokemon/4/",name:"charmander"},{url:"http://pokeapi.co/api/v2/pokemon/5/",name:"charmeleon"},{url:"http://pokeapi.co/api/v2/pokemon/6/",name:"charizard"},{url:"http://pokeapi.co/api/v2/pokemon/7/",name:"squirtle"},{url:"http://pokeapi.co/api/v2/pokemon/8/",name:"wartortle"},{url:"http://pokeapi.co/api/v2/pokemon/9/",name:"blastoise"},{url:"http://pokeapi.co/api/v2/pokemon/10/",name:"caterpie"},{url:"http://pokeapi.co/api/v2/pokemon/11/",name:"metapod"},{url:"http://pokeapi.co/api/v2/pokemon/12/",name:"butterfree"},{url:"http://pokeapi.co/api/v2/pokemon/13/",name:"weedle"},{url:"http://pokeapi.co/api/v2/pokemon/14/",name:"kakuna"},{url:"http://pokeapi.co/api/v2/pokemon/15/",name:"beedrill"},{url:"http://pokeapi.co/api/v2/pokemon/16/",name:"pidgey"},{url:"http://pokeapi.co/api/v2/pokemon/17/",name:"pidgeotto"},{url:"http://pokeapi.co/api/v2/pokemon/18/",name:"pidgeot"},{url:"http://pokeapi.co/api/v2/pokemon/19/",name:"rattata"},{url:"http://pokeapi.co/api/v2/pokemon/20/",name:"raticate"},{url:"http://pokeapi.co/api/v2/pokemon/21/",name:"spearow"},{url:"http://pokeapi.co/api/v2/pokemon/22/",name:"fearow"},{url:"http://pokeapi.co/api/v2/pokemon/23/",name:"ekans"},{url:"http://pokeapi.co/api/v2/pokemon/24/",name:"arbok"},{url:"http://pokeapi.co/api/v2/pokemon/25/",name:"pikachu"},{url:"http://pokeapi.co/api/v2/pokemon/26/",name:"raichu"},{url:"http://pokeapi.co/api/v2/pokemon/27/",name:"sandshrew"},{url:"http://pokeapi.co/api/v2/pokemon/28/",name:"sandslash"},{url:"http://pokeapi.co/api/v2/pokemon/29/",name:"nidoran-f"},{url:"http://pokeapi.co/api/v2/pokemon/30/",name:"nidorina"},{url:"http://pokeapi.co/api/v2/pokemon/31/",name:"nidoqueen"},{url:"http://pokeapi.co/api/v2/pokemon/32/",name:"nidoran-m"},{url:"http://pokeapi.co/api/v2/pokemon/33/",name:"nidorino"},{url:"http://pokeapi.co/api/v2/pokemon/34/",name:"nidoking"},{url:"http://pokeapi.co/api/v2/pokemon/35/",name:"clefairy"},{url:"http://pokeapi.co/api/v2/pokemon/36/",name:"clefable"},{url:"http://pokeapi.co/api/v2/pokemon/37/",name:"vulpix"},{url:"http://pokeapi.co/api/v2/pokemon/38/",name:"ninetales"},{url:"http://pokeapi.co/api/v2/pokemon/39/",name:"jigglypuff"},{url:"http://pokeapi.co/api/v2/pokemon/40/",name:"wigglytuff"},{url:"http://pokeapi.co/api/v2/pokemon/41/",name:"zubat"},{url:"http://pokeapi.co/api/v2/pokemon/42/",name:"golbat"},{url:"http://pokeapi.co/api/v2/pokemon/43/",name:"oddish"},{url:"http://pokeapi.co/api/v2/pokemon/44/",name:"gloom"},{url:"http://pokeapi.co/api/v2/pokemon/45/",name:"vileplume"},{url:"http://pokeapi.co/api/v2/pokemon/46/",name:"paras"},{url:"http://pokeapi.co/api/v2/pokemon/47/",name:"parasect"},{url:"http://pokeapi.co/api/v2/pokemon/48/",name:"venonat"},{url:"http://pokeapi.co/api/v2/pokemon/49/",name:"venomoth"},{url:"http://pokeapi.co/api/v2/pokemon/50/",name:"diglett"},{url:"http://pokeapi.co/api/v2/pokemon/51/",name:"dugtrio"},{url:"http://pokeapi.co/api/v2/pokemon/52/",name:"meowth"},{url:"http://pokeapi.co/api/v2/pokemon/53/",name:"persian"},{url:"http://pokeapi.co/api/v2/pokemon/54/",name:"psyduck"},{url:"http://pokeapi.co/api/v2/pokemon/55/",name:"golduck"},{url:"http://pokeapi.co/api/v2/pokemon/56/",name:"mankey"},{url:"http://pokeapi.co/api/v2/pokemon/57/",name:"primeape"},{url:"http://pokeapi.co/api/v2/pokemon/58/",name:"growlithe"},{url:"http://pokeapi.co/api/v2/pokemon/59/",name:"arcanine"},{url:"http://pokeapi.co/api/v2/pokemon/60/",name:"poliwag"},{url:"http://pokeapi.co/api/v2/pokemon/61/",name:"poliwhirl"},{url:"http://pokeapi.co/api/v2/pokemon/62/",name:"poliwrath"},{url:"http://pokeapi.co/api/v2/pokemon/63/",name:"abra"},{url:"http://pokeapi.co/api/v2/pokemon/64/",name:"kadabra"},{url:"http://pokeapi.co/api/v2/pokemon/65/",name:"alakazam"},{url:"http://pokeapi.co/api/v2/pokemon/66/",name:"machop"},{url:"http://pokeapi.co/api/v2/pokemon/67/",name:"machoke"},{url:"http://pokeapi.co/api/v2/pokemon/68/",name:"machamp"},{url:"http://pokeapi.co/api/v2/pokemon/69/",name:"bellsprout"},{url:"http://pokeapi.co/api/v2/pokemon/70/",name:"weepinbell"},{url:"http://pokeapi.co/api/v2/pokemon/71/",name:"victreebel"},{url:"http://pokeapi.co/api/v2/pokemon/72/",name:"tentacool"},{url:"http://pokeapi.co/api/v2/pokemon/73/",name:"tentacruel"},{url:"http://pokeapi.co/api/v2/pokemon/74/",name:"geodude"},{url:"http://pokeapi.co/api/v2/pokemon/75/",name:"graveler"},{url:"http://pokeapi.co/api/v2/pokemon/76/",name:"golem"},{url:"http://pokeapi.co/api/v2/pokemon/77/",name:"ponyta"},{url:"http://pokeapi.co/api/v2/pokemon/78/",name:"rapidash"},{url:"http://pokeapi.co/api/v2/pokemon/79/",name:"slowpoke"},{url:"http://pokeapi.co/api/v2/pokemon/80/",name:"slowbro"},{url:"http://pokeapi.co/api/v2/pokemon/81/",name:"magnemite"},{url:"http://pokeapi.co/api/v2/pokemon/82/",name:"magneton"},{url:"http://pokeapi.co/api/v2/pokemon/83/",name:"farfetchd"},{url:"http://pokeapi.co/api/v2/pokemon/84/",name:"doduo"},{url:"http://pokeapi.co/api/v2/pokemon/85/",name:"dodrio"},{url:"http://pokeapi.co/api/v2/pokemon/86/",name:"seel"},{url:"http://pokeapi.co/api/v2/pokemon/87/",name:"dewgong"},{url:"http://pokeapi.co/api/v2/pokemon/88/",name:"grimer"},{url:"http://pokeapi.co/api/v2/pokemon/89/",name:"muk"},{url:"http://pokeapi.co/api/v2/pokemon/90/",name:"shellder"},{url:"http://pokeapi.co/api/v2/pokemon/91/",name:"cloyster"},{url:"http://pokeapi.co/api/v2/pokemon/92/",name:"gastly"},{url:"http://pokeapi.co/api/v2/pokemon/93/",name:"haunter"},{url:"http://pokeapi.co/api/v2/pokemon/94/",name:"gengar"},{url:"http://pokeapi.co/api/v2/pokemon/95/",name:"onix"},{url:"http://pokeapi.co/api/v2/pokemon/96/",name:"drowzee"},{url:"http://pokeapi.co/api/v2/pokemon/97/",name:"hypno"},{url:"http://pokeapi.co/api/v2/pokemon/98/",name:"krabby"},{url:"http://pokeapi.co/api/v2/pokemon/99/",name:"kingler"},{url:"http://pokeapi.co/api/v2/pokemon/100/",name:"voltorb"},{url:"http://pokeapi.co/api/v2/pokemon/101/",name:"electrode"},{url:"http://pokeapi.co/api/v2/pokemon/102/",name:"exeggcute"},{url:"http://pokeapi.co/api/v2/pokemon/103/",name:"exeggutor"},{url:"http://pokeapi.co/api/v2/pokemon/104/",name:"cubone"},{url:"http://pokeapi.co/api/v2/pokemon/105/",name:"marowak"},{url:"http://pokeapi.co/api/v2/pokemon/106/",name:"hitmonlee"},{url:"http://pokeapi.co/api/v2/pokemon/107/",name:"hitmonchan"},{url:"http://pokeapi.co/api/v2/pokemon/108/",name:"lickitung"},{url:"http://pokeapi.co/api/v2/pokemon/109/",name:"koffing"},{url:"http://pokeapi.co/api/v2/pokemon/110/",name:"weezing"},{url:"http://pokeapi.co/api/v2/pokemon/111/",name:"rhyhorn"},{url:"http://pokeapi.co/api/v2/pokemon/112/",name:"rhydon"},{url:"http://pokeapi.co/api/v2/pokemon/113/",name:"chansey"},{url:"http://pokeapi.co/api/v2/pokemon/114/",name:"tangela"},{url:"http://pokeapi.co/api/v2/pokemon/115/",name:"kangaskhan"},{url:"http://pokeapi.co/api/v2/pokemon/116/",name:"horsea"},{url:"http://pokeapi.co/api/v2/pokemon/117/",name:"seadra"},{url:"http://pokeapi.co/api/v2/pokemon/118/",name:"goldeen"},{url:"http://pokeapi.co/api/v2/pokemon/119/",name:"seaking"},{url:"http://pokeapi.co/api/v2/pokemon/120/",name:"staryu"},{url:"http://pokeapi.co/api/v2/pokemon/121/",name:"starmie"},{url:"http://pokeapi.co/api/v2/pokemon/122/",name:"mr-mime"},{url:"http://pokeapi.co/api/v2/pokemon/123/",name:"scyther"},{url:"http://pokeapi.co/api/v2/pokemon/124/",name:"jynx"},{url:"http://pokeapi.co/api/v2/pokemon/125/",name:"electabuzz"},{url:"http://pokeapi.co/api/v2/pokemon/126/",name:"magmar"},{url:"http://pokeapi.co/api/v2/pokemon/127/",name:"pinsir"},{url:"http://pokeapi.co/api/v2/pokemon/128/",name:"tauros"},{url:"http://pokeapi.co/api/v2/pokemon/129/",name:"magikarp"},{url:"http://pokeapi.co/api/v2/pokemon/130/",name:"gyarados"},{url:"http://pokeapi.co/api/v2/pokemon/131/",name:"lapras"},{url:"http://pokeapi.co/api/v2/pokemon/132/",name:"ditto"},{url:"http://pokeapi.co/api/v2/pokemon/133/",name:"eevee"},{url:"http://pokeapi.co/api/v2/pokemon/134/",name:"vaporeon"},{url:"http://pokeapi.co/api/v2/pokemon/135/",name:"jolteon"},{url:"http://pokeapi.co/api/v2/pokemon/136/",name:"flareon"},{url:"http://pokeapi.co/api/v2/pokemon/137/",name:"porygon"},{url:"http://pokeapi.co/api/v2/pokemon/138/",name:"omanyte"},{url:"http://pokeapi.co/api/v2/pokemon/139/",name:"omastar"},{url:"http://pokeapi.co/api/v2/pokemon/140/",name:"kabuto"},{url:"http://pokeapi.co/api/v2/pokemon/141/",name:"kabutops"},{url:"http://pokeapi.co/api/v2/pokemon/142/",name:"aerodactyl"},{url:"http://pokeapi.co/api/v2/pokemon/143/",name:"snorlax"},{url:"http://pokeapi.co/api/v2/pokemon/144/",name:"articuno"},{url:"http://pokeapi.co/api/v2/pokemon/145/",name:"zapdos"},{url:"http://pokeapi.co/api/v2/pokemon/146/",name:"moltres"},{url:"http://pokeapi.co/api/v2/pokemon/147/",name:"dratini"},{url:"http://pokeapi.co/api/v2/pokemon/148/",name:"dragonair"},{url:"http://pokeapi.co/api/v2/pokemon/149/",name:"dragonite"},{url:"http://pokeapi.co/api/v2/pokemon/150/",name:"mewtwo"},
-  {url:"http://pokeapi.co/api/v2/pokemon/151/",name:"mew"}
+/* tslint:disable */
+export const pokemonData = [
+  { id: 1, name: 'bulbasaur', types: [],  height: 0, weight: 0, description: 'For some time after its birth, it grows by gaining nourishment from the seed on its back.' },
+  { id: 2, name: 'ivysaur', types: [],  height: 0, weight: 0, description: 'When the bud on its back starts swelling, a sweet aroma wafts to indicate the flowers coming bloom.' },
+  { id: 3, name: 'venusaur', types: [],  height: 0, weight: 0, description: 'After a rainy day, the flower on its back smells stronger. The scent attracts other Pokémon.' },
+  { id: 4, name: 'charmander', types: [],  height: 0, weight: 0, description: 'The fire on the tip of its tail is a measure of its life. If healthy, its tail burns intensely.' },
+  { id: 5, name: 'charmeleon', types: [],  height: 0, weight: 0, description: 'In the rocky mountains where Charmeleon live, their fiery tails shine at night like stars.' },
+  { id: 6, name: 'charizard', types: [],  height: 0, weight: 0, description: 'It is said that Charizards fire burns hotter if it has experienced harsh battles.' },
+  { id: 7, name: 'squirtle', types: [],  height: 0, weight: 0, description: 'It shelters itself in its shell then strikes back with spouts of water at every opportunity.' },
+  { id: 8, name: 'wartortle', types: [],  height: 0, weight: 0, description: 'It is said to live 10,000 years. Its furry tail is popular as a symbol of longevity.' },
+  { id: 9, name: 'blastoise', types: [],  height: 0, weight: 0, description: 'The jets of water it spouts from the rocket cannons on its shell can punch through thick steel.' },
+  { id: 10, name: 'caterpie', types: [],  height: 0, weight: 0, description: 'It releases a stench from its red antenna to repel enemies. It grows by molting repeatedly.' },
+  { id: 11, name: 'metapod', types: [],  height: 0, weight: 0, description: 'A steel-hard shell protects its tender body. It quietly endures hardships while awaiting evolution.' },
+  { id: 12, name: 'butterfree', types: [],  height: 0, weight: 0, description: 'It loves the honey of flowers and can locate flower patches that have even tiny amounts of pollen.' },
+  { id: 13, name: 'weedle', types: [],  height: 0, weight: 0, description: 'It eats its weight in leaves every day. It fends off attackers with the needle on its head.' },
+  { id: 14, name: 'kakuna', types: [],  height: 0, weight: 0, description: 'While awaiting evolution, it hides from predators under leaves and in nooks of branches.' },
+  { id: 15, name: 'beedrill', types: [],  height: 0, weight: 0, description: 'Its best attack involves flying around at high speed, striking with poison needles, then flying off.' },
+  { id: 16, name: 'pidgey', types: [],  height: 0, weight: 0, description: 'It is docile and prefers to avoid conflict. If disturbed, however, it can ferociously strike back.' },
+  { id: 17, name: 'pidgeotto', types: [],  height: 0, weight: 0, description: 'It flies over its wide territory in search of prey, downing it with its highly developed claws.' },
+  { id: 18, name: 'pidgeot', types: [],  height: 0, weight: 0, description: 'It flies over its wide territory in search of prey, downing it with its highly developed claws.' },
+  { id: 19, name: 'rattata', types: [],  height: 0, weight: 0, description: 'It searches for food all day. It gnaws on hard objects to wear down its fangs, which grow constantly during its lifetime.' },
+  { id: 20, name: 'raticate', types: [],  height: 0, weight: 0, description: 'With its long fangs, this surprisingly violent Pokémon can gnaw away even thick concrete with ease.' },
+  { id: 21, name: 'spearow', types: [],  height: 0, weight: 0, description: 'It flaps its small wings busily to fly. Using its beak, it searches in grass for prey.' },
+  { id: 22, name: 'fearow', types: [],  height: 0, weight: 0, description: 'It has the stamina to fly all day on its broad wings. It fights by using its sharp beak.' },
+  { id: 23, name: 'ekans', types: [],  height: 0, weight: 0, description: 'It sneaks through grass without making a sound and strikes unsuspecting prey from behind.' },
+  { id: 24, name: 'arbok', types: [],  height: 0, weight: 0, description: 'The pattern on its belly is for intimidation. It constricts foes while they are frozen in fear.' },
+  { id: 25, name: 'pikachu', types: [],  height: 0, weight: 0, description: 'It occasionally uses an electric shock to recharge a fellow Pikachu that is in a weakened state.' },
+  { id: 26, name: 'raichu', types: [],  height: 0, weight: 0, description: 'Its tail discharges electricity into the ground, protecting it from getting shocked.' },
+  { id: 27, name: 'sandshrew', types: [],  height: 0, weight: 0, description: 'It digs deep burrows to live in. When in danger, it rolls up its body to withstand attacks.' },
+  { id: 28, name: 'sandslash', types: [],  height: 0, weight: 0, description: 'The spikes on its body are made up of its hardened hide. It rolls up and attacks foes with its spikes.' },
+  { id: 29, name: 'nidoran', types: [],  height: 0, weight: 0, description: 'While it does not prefer to fight, even one drop of the poison it secretes from barbs can be fatal.' },
+  { id: 30, name: 'nidorina', types: [],  height: 0, weight: 0, description: 'When it senses danger, it raises all the barbs on its body. These barbs grow slower than Nidorinos.' },
+  { id: 31, name: 'nidoqueen', types: [],  height: 0, weight: 0, description: 'Its entire body is armored with hard scales. It will protect the young in its burrow with its life.' },
+  { id: 32, name: 'nidoran', types: [],  height: 0, weight: 0, description: 'It scans its surroundings by raising its ears out of the grass. Its toxic horn is for protection.' },
+  { id: 33, name: 'nidorino', types: [],  height: 0, weight: 0, description: 'It has a violent disposition and stabs foes with its horn, which oozes poison upon impact.' },
+  { id: 34, name: 'nidoking', types: [],  height: 0, weight: 0, description: 'One swing of its mighty tail can snap a telephone pole as if it were a matchstick.' },
+  { id: 35, name: 'clefairy', types: [],  height: 0, weight: 0, description: 'On nights with a full moon, Clefairy gather from all over and dance. Bathing in moonlight makes them float.' },
+  { id: 36, name: 'clefable', types: [],  height: 0, weight: 0, description: 'Their ears are sensitive enough to hear a pin drop from over a mile away, so theyre usually found in quiet places.' },
+  { id: 37, name: 'vulpix', types: [],  height: 0, weight: 0, description: 'As each tail grows, its fur becomes more lustrous. When held, it feels slightly warm.' },
+  { id: 38, name: 'ninetales', types: [],  height: 0, weight: 0, description: 'Each of its nine tails is imbued with supernatural power, and it can live for a thousand years.' },
+  { id: 39, name: 'jigglypuff', types: [],  height: 0, weight: 0, description: 'Looking into its cute, round eyes makes it start singing a song so pleasant listeners cant help but fall asleep.' },
+  { id: 40, name: 'wigglytuff', types: [],  height: 0, weight: 0, description: 'Its fine fur feels so pleasant, those who accidentally touch it cannot take their hands away.' },
+  { id: 41, name: 'zubat', types: [],  height: 0, weight: 0, description: 'It does not need eyes, because it emits ultrasonic waves to check its surroundings while it flies.' },
+  { id: 42, name: 'golbat', types: [],  height: 0, weight: 0, description: 'Flitting around in the dead of night, it sinks its fangs into its prey and drains a nearly fatal amount of blood.' },
+  { id: 43, name: 'oddish', types: [],  height: 0, weight: 0, description: 'It often plants its root feet in the ground during the day and sows seeds as it walks about at night.' },
+  { id: 44, name: 'gloom', types: [],  height: 0, weight: 0, description: 'The honey it drools from its mouth smells so atrocious, it can curl noses more than a mile away.' },
+  { id: 45, name: 'vileplume', types: [],  height: 0, weight: 0, description: 'Its petals are the largest in the world. As it walks, it scatters extremely allergenic pollen.' },
+  { id: 46, name: 'paras', types: [],  height: 0, weight: 0, description: 'Mushrooms named tochukaso grow on its back. They grow along with the host Paras.' },
+  { id: 47, name: 'parasect', types: [],  height: 0, weight: 0, description: 'A mushroom grown larger than the hosts body controls Parasect. It scatters poisonous spores.' },
+  { id: 48, name: 'venonat', types: [],  height: 0, weight: 0, description: 'Its big eyes are actually clusters of tiny eyes. At night, its kind is drawn by light.' },
+  { id: 49, name: 'venomoth', types: [],  height: 0, weight: 0, description: 'It flutters its wings to scatter dustlike scales. The scales leach toxins if they contact skin.' },
+  { id: 50, name: 'diglett', types: [],  height: 0, weight: 0, description: 'A Pokémon that lives underground. Because of its dark habitat, it is repelled by bright sunlight.' },
+  { id: 51, name: 'dugtrio', types: [],  height: 0, weight: 0, description: 'Its three heads move alternately, driving it through tough soil to depths of over 60 miles.' },
+  { id: 52, name: 'meowth', types: [],  height: 0, weight: 0, description: 'It is nocturnal in nature. If it spots something shiny, its eyes glitter brightly.' },
+  { id: 53, name: 'persian', types: [],  height: 0, weight: 0, description: 'A very haughty Pokémon. Among fans, the size of the jewel in its forehead is a topic of much talk.' },
+  { id: 54, name: 'psyduck', types: [],  height: 0, weight: 0, description: 'When headaches stimulate its brain cells, which are usually inactive, it can use a mysterious power.' },
+  { id: 55, name: 'golduck', types: [],  height: 0, weight: 0, description: 'When its forehead shines mysteriously, Golduck can use the full extent of its power.' },
+  { id: 56, name: 'mankey', types: [],  height: 0, weight: 0, description: 'It lives in treetop colonies. If one becomes enraged, the whole colony rampages for no reason.' },
+  { id: 57, name: 'primeape', types: [],  height: 0, weight: 0, description: 'It grows angry if you see its eyes and gets angrier if you run. If you beat it, it gets even madder.' },
+  { id: 58, name: 'growlithe', types: [],  height: 0, weight: 0, description: 'Extremely loyal to its Trainer, it will bark at those who approach the Trainer unexpectedly and run them out of town.' },
+  { id: 59, name: 'arcanine', types: [],  height: 0, weight: 0, description: 'The sight of it running over 6,200 miles in a single day and night has captivated many people.' },
+  { id: 60, name: 'poliwag', types: [],  height: 0, weight: 0, description: 'Its skin is so thin, its internal organs are visible. It has trouble walking on its newly grown feet.' },
+  { id: 61, name: 'poliwhirl', types: [],  height: 0, weight: 0, description: 'The spiral pattern on its belly subtly undulates. Staring at it gradually causes drowsiness.' },
+  { id: 62, name: 'poliwrath', types: [],  height: 0, weight: 0, description: 'With its extremely tough muscles, it can keep swimming in the Pacific Ocean without resting.' },
+  { id: 63, name: 'abra', types: [],  height: 0, weight: 0, description: 'Using its psychic power is such a strain on its brain that it needs to sleep for 18 hours a day.' },
+  { id: 64, name: 'kadabra', types: [],  height: 0, weight: 0, description: 'It stares at its silver spoon to focus its mind. It emits more alpha waves while doing so.' },
+  { id: 65, name: 'alakazam', types: [],  height: 0, weight: 0, description: 'The spoons clutched in its hands are said to have been created by its psychic powers.' },
+  { id: 66, name: 'machop', types: [],  height: 0, weight: 0, description: 'Though small in stature, it is powerful enough to easily heft and throw a number of Geodude at once.' },
+  { id: 67, name: 'machoke', types: [],  height: 0, weight: 0, description: 'It happily carries heavy cargo to toughen up. It willingly does hard work for people.' },
+  { id: 68, name: 'machamp', types: [],  height: 0, weight: 0, description: 'Its four muscled arms slam foes with powerful punches and chops at blinding speed.' },
+  { id: 69, name: 'bellsprout', types: [],  height: 0, weight: 0, description: 'It prefers hot and humid environments. It is quick at capturing prey with its vines.' },
+  { id: 70, name: 'weepinbell', types: [],  height: 0, weight: 0, description: 'A Pokémon that appears to be a plant. It captures unwary prey by dousing them with a toxic powder.' },
+  { id: 71, name: 'victreebel', types: [],  height: 0, weight: 0, description: 'It pools in its mouth a fluid with a honey-like scent, which is really an acid that dissolves anything.' },
+  { id: 72, name: 'tentacool', types: [],  height: 0, weight: 0, description: 'Because its body is almost entirely composed of water, it shrivels up if it is washed ashore.' },
+  { id: 73, name: 'tentacruel', types: [],  height: 0, weight: 0, description: 'It extends its 80 tentacles to form an encircling poisonous net that is difficult to escape.' },
+  { id: 74, name: 'geodude', types: [],  height: 0, weight: 0, description: 'At rest, it looks just like a rock. Carelessly stepping on it will make it swing its fists angrily.' },
+  { id: 75, name: 'graveler', types: [],  height: 0, weight: 0, description: 'It rolls on mountain paths to move. Once it builds momentum, no Pokémon can stop it without difficulty.' },
+  { id: 76, name: 'golem', types: [],  height: 0, weight: 0, description: 'Even dynamite cant harm its hard, boulder-like body. It sheds its hide just once a year.' },
+  { id: 77, name: 'ponyta', types: [],  height: 0, weight: 0, description: 'As a newborn, it can barely stand. However, through galloping, its legs are made tougher and faster.' },
+  { id: 78, name: 'rapidash', types: [],  height: 0, weight: 0, description: 'When at an all-out gallop, its blazing mane sparkles, enhancing its beautiful appearance.' },
+  { id: 79, name: 'slowpoke', types: [],  height: 0, weight: 0, description: 'Although slow, it is skilled at fishing with its tail. It does not feel pain if its tail is bitten.' },
+  { id: 80, name: 'slowbro', types: [],  height: 0, weight: 0, description: 'Though usually dim witted, it seems to become inspired if the Shellder on its tail bites down.' },
+  { id: 81, name: 'magnemite', types: [],  height: 0, weight: 0, description: 'The electromagnetic waves emitted by the units at the sides of its head expel antigravity, which allows it to float.' },
+  { id: 82, name: 'magneton', types: [],  height: 0, weight: 0, description: 'The stronger electromagnetic waves from the three linked Magnemite are enough to dry out surrounding moisture.' },
+  { id: 83, name: 'farfetchd', types: [],  height: 0, weight: 0, description: 'It cant live without the stalk it holds. Thats why it defends the stalk from attackers with its life.' },
+  { id: 84, name: 'doduo', types: [],  height: 0, weight: 0, description: 'The brains in its two heads appear to communicate emotions to each other with a telepathic power.' },
+  { id: 85, name: 'dodrio', types: [],  height: 0, weight: 0, description: 'When Doduo evolves into this odd breed, one of its heads splits into two. It runs at nearly 40 mph.' },
+  { id: 86, name: 'seel', types: [],  height: 0, weight: 0, description: 'The colder it gets, the better it feels. It joyfully swims around oceans so cold that they are filled with floating ice.' },
+  { id: 87, name: 'dewgong', types: [],  height: 0, weight: 0, description: 'Its streamlined body has low resistance, and it swims around cold oceans at a speed of eight knots.' },
+  { id: 88, name: 'grimer', types: [],  height: 0, weight: 0, description: 'Born from sludge, these Pokémon now gather in polluted places and increase the bacteria in their bodies.' },
+  { id: 89, name: 'muk', types: [],  height: 0, weight: 0, description: 'Its so stinky! Muks body contains toxic elements, and any plant will wilt when it passes by.' },
+  { id: 90, name: 'shellder', types: [],  height: 0, weight: 0, description: 'It swims backward by opening and closing its two shells. Its large tongue is always kept hanging out.' },
+  { id: 91, name: 'cloyster', types: [],  height: 0, weight: 0, description: 'It fights by keeping its shell tightly shut for protection and by shooting spikes to repel foes.' },
+  { id: 92, name: 'gastly', types: [],  height: 0, weight: 0, description: 'Born from gases, anyone would faint if engulfed by its gaseous body, which contains poison.' },
+  { id: 93, name: 'haunter', types: [],  height: 0, weight: 0, description: 'It likes to lurk in the dark and tap shoulders with a gaseous hand. Its touch causes endless shuddering.' },
+  { id: 94, name: 'gengar', types: [],  height: 0, weight: 0, description: 'The leer that floats in darkness belongs to a Gengar delighting in casting curses on people.' },
+  { id: 95, name: 'onix', types: [],  height: 0, weight: 0, description: 'Opening its large mouth, it ingests massive amounts of soil and creates long tunnels.' },
+  { id: 96, name: 'drowzee', types: [],  height: 0, weight: 0, description: 'It can tell what people are dreaming by sniffing with its big nose. It loves fun dreams.' },
+  { id: 97, name: 'hypno', types: [],  height: 0, weight: 0, description: 'Seeing its swinging pendulum can induce sleep in three seconds, even in someone who just woke up.' },
+  { id: 98, name: 'krabby', types: [],  height: 0, weight: 0, description: 'It lives in burrows dug on sandy beaches. Its pincers fully grow back if they are broken in battle.' },
+  { id: 99, name: 'kingler', types: [],  height: 0, weight: 0, description: 'The larger pincer has 10,000- horsepower strength. However, it is so heavy, it is difficult to aim.' },
+  { id: 100, name: 'voltorb', types: [],  height: 0, weight: 0, description: 'It looks just like a Pok Ball. It is dangerous because it may electrocute or explode on contact.' },
+  { id: 101, name: 'electrode', types: [],  height: 0, weight: 0, description: 'It is known to drift on winds if it is bloated to bursting with stored electricity.' },
+  { id: 102, name: 'exeggcute', types: [],  height: 0, weight: 0, description: 'Its six eggs converse using telepathy. They can quickly gather if they become separated.' },
+  { id: 103, name: 'exeggutor', types: [],  height: 0, weight: 0, description: 'It is called The Walking Jungle. If a head grows too big, it falls off and becomes an Exeggcute.' },
+  { id: 104, name: 'cubone', types: [],  height: 0, weight: 0, description: 'When it thinks of its dead mother, it cries. Its crying makes the skull it wears rattle hollowly.' },
+  { id: 105, name: 'marowak', types: [],  height: 0, weight: 0, description: 'From its birth, this savage Pokémon constantly holds bones. It is skilled in using them as weapons.' },
+  { id: 106, name: 'hitmonlee', types: [],  height: 0, weight: 0, description: 'Its legs can stretch double. First-time foes are startled by its extensible reach.' },
+  { id: 107, name: 'hitmonchan', types: [],  height: 0, weight: 0, description: 'The arm-twisting punches it throws pulverize even concrete. It rests after three minutes of fighting.' },
+  { id: 108, name: 'lickitung', types: [],  height: 0, weight: 0, description: 'Being licked by its long, saliva-covered tongue leaves a tingling sensation. Extending its tongue retracts its tail.' },
+  { id: 109, name: 'koffing', types: [],  height: 0, weight: 0, description: 'Toxic gas is held within its thin, balloon-shaped body, so it can cause massive explosions.' },
+  { id: 110, name: 'weezing', types: [],  height: 0, weight: 0, description: 'Inhaling toxic fumes from trash and mixing them inside its body lets it spread an even fouler stench.' },
+  { id: 111, name: 'rhyhorn', types: [],  height: 0, weight: 0, description: 'Its powerful tackles can destroy anything. However, it is too slow witted to help people work.' },
+  { id: 112, name: 'rhydon', types: [],  height: 0, weight: 0, description: 'Standing on its hind legs freed its forelegs and made it smarter. It is very forgetful, however.' },
+  { id: 113, name: 'chansey', types: [],  height: 0, weight: 0, description: 'A kindly Pokémon that lays highly nutritious eggs and shares them with injured Pokmon or people.' },
+  { id: 114, name: 'tangela', types: [],  height: 0, weight: 0, description: 'Many writhing vines cover it, so its true identity remains unknown. The blue vines grow its whole life long.' },
+  { id: 115, name: 'kangaskhan', types: [],  height: 0, weight: 0, description: 'It raises its offspring in its belly pouch. It lets the baby out to play only when it feels safe.' },
+  { id: 116, name: 'horsea', types: [],  height: 0, weight: 0, description: 'It makes its nest in the shade of corals. If it senses danger, it spits murky ink and flees.' },
+  { id: 117, name: 'seadra', types: [],  height: 0, weight: 0, description: 'Its spines provide protection. Its fins and bones are prized as traditional-medicine ingredients.' },
+  { id: 118, name: 'goldeen', types: [],  height: 0, weight: 0, description: 'Though it appears very elegant when swimming with fins unfurled, it can jab powerfully with its horn.' },
+  { id: 119, name: 'seaking', types: [],  height: 0, weight: 0, description: 'In autumn, its body becomes more fatty in preparing to propose to a mate. It takes on beautiful colors.' },
+  { id: 120, name: 'staryu', types: [],  height: 0, weight: 0, description: 'As long as its red core remains, it can regenerate its body instantly, even if its torn apart.' },
+  { id: 121, name: 'starmie', types: [],  height: 0, weight: 0, description: 'Its core shines in many colors and sends radio signals into space to communicate with something.' },
+  { id: 122, name: 'mr-mime', types: [],  height: 0, weight: 0, description: 'It shapes an invisible wall in midair by minutely vibrating its fingertips to stop molecules in the air.' },
+  { id: 123, name: 'scyther', types: [],  height: 0, weight: 0, description: 'The sharp scythes on its forearms become increasingly sharp by cutting through hard objects.' },
+  { id: 124, name: 'jynx', types: [],  height: 0, weight: 0, description: 'Its cries sound like human speech. However, it is impossible to tell what it is trying to say.' },
+  { id: 125, name: 'electabuzz', types: [],  height: 0, weight: 0, description: 'Research is progressing on storing lightning in Electabuzz so this energy can be used at any time.' },
+  { id: 126, name: 'magmar', types: [],  height: 0, weight: 0, description: 'The scorching fire exhaled by Magmar forms heat waves around its body, making it hard to see the Pokémon clearly.' },
+  { id: 127, name: 'pinsir', types: [],  height: 0, weight: 0, description: 'It grips prey with its powerful pincers and will not let go until the prey is torn in half.' },
+  { id: 128, name: 'tauros', types: [],  height: 0, weight: 0, description: 'Once it takes aim at its foe, it makes a headlong charge. It is famous for its violent nature.' },
+  { id: 129, name: 'magikarp', types: [],  height: 0, weight: 0, description: 'A Magikarp living for many years can leap a mountain using Splash. The move remains useless, though.' },
+  { id: 130, name: 'gyarados', types: [],  height: 0, weight: 0, description: 'Once it begins to rampage, a Gyarados will burn everything down, even in a harsh storm.' },
+  { id: 131, name: 'lapras', types: [],  height: 0, weight: 0, description: 'Able to understand human speech and very intelligent, it loves to swim in the sea with people on its back.' },
+  { id: 132, name: 'ditto', types: [],  height: 0, weight: 0, description: 'It can reconstitute its entire cellular structure to change into what it sees, but it returns to normal when it relaxes.' },
+  { id: 133, name: 'eevee', types: [],  height: 0, weight: 0, description: 'Thanks to its unstable genetic makeup, this special Pokémon conceals many different possible evolutions.' },
+  { id: 134, name: 'vaporeon', types: [],  height: 0, weight: 0, description: 'Its cell composition is similar to water molecules. As a result, it cant be seen when it melts away into water.' },
+  { id: 135, name: 'jolteon', types: [],  height: 0, weight: 0, description: 'By storing electricity in its body, it can shoot its bristlelike fur like a barrage of missiles.' },
+  { id: 136, name: 'flareon', types: [],  height: 0, weight: 0, description: 'Inhaled air is carried to its flame sac, heated, and exhaled as fire that reaches over 3,000 degrees F.' },
+  { id: 137, name: 'porygon', types: [],  height: 0, weight: 0, description: 'A man-made Pokémon created using advanced scientific means. It can move freely in cyberspace.' },
+  { id: 138, name: 'omanyte', types: [],  height: 0, weight: 0, description: 'A Pokémon that was resurrected from a fossil using modern science. It swam in ancient seas.' },
+  { id: 139, name: 'omastar', types: [],  height: 0, weight: 0, description: 'It is thought that this Pokémon became extinct because its spiral shell grew too large.' },
+  { id: 140, name: 'kabuto', types: [],  height: 0, weight: 0, description: 'It is thought to have inhabited beaches 300 million years ago. It is protected by a stiff shell.' },
+  { id: 141, name: 'kabutops', types: [],  height: 0, weight: 0, description: 'It is thought that this Pokémon came onto land because its prey adapted to life on land.' },
+  { id: 142, name: 'aerodactyl', types: [],  height: 0, weight: 0, description: 'A Pokémon that roamed the skies in the dinosaur era. Its teeth are like saw blades.' },
+  { id: 143, name: 'snorlax', types: [],  height: 0, weight: 0, description: 'When its belly is full, it becomes too lethargic to even lift a finger, so it is safe to bounce on its belly.' },
+  { id: 144, name: 'articuno', types: [],  height: 0, weight: 0, description: 'A legendary bird Pokémon. It can create blizzards by freezing moisture in the air.' },
+  { id: 145, name: 'zapdos', types: [],  height: 0, weight: 0, description: 'A legendary Pokémon that is said to live in thunderclouds. It freely controls lightning bolts.' },
+  { id: 146, name: 'moltres', types: [],  height: 0, weight: 0, description: 'One of the legendary bird Pokémon. It is said that its appearance indicates the coming of spring.' },
+  { id: 147, name: 'dratini', types: [],  height: 0, weight: 0, description: 'It is called the Mirage Pokémon because so few have seen it. Its shed skin has been found.' },
+  { id: 148, name: 'dragonair', types: [],  height: 0, weight: 0, description: 'If its body takes on an aura, the weather changes instantly. It is said to live in seas and lakes.' },
+  { id: 149, name: 'dragonite', types: [],  height: 0, weight: 0, description: 'It is said to make its home somewhere in the sea. It guides crews of shipwrecks to shore.' },
+  { id: 150, name: 'mewtwo', types: [],  height: 0, weight: 0, description: 'A Pokémon created by recombining Mews genes. Its said to have the most savage heart among Pokmon.' },
+  { id: 151, name: 'mew', types: [],  height: 0, weight: 0, description: 'Mew is said to possess the genetic composition of all Pokémon. It is capable of making itself invisible at will, so it entirely avoids notice even if it approaches people.' }
 ];
+/* tslint:enable */

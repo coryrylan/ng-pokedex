@@ -14,14 +14,14 @@ import { PokemonService } from './../shared/services/pokemon.service';
 })
 export class PokemonDetailComponent implements OnInit {
   pokemon: Observable<Pokemon>;
-  
+
   constructor(
     private router: ActivatedRoute, 
     private pokemonService: PokemonService) { }
 
   ngOnInit() {
     this.pokemon = this.router.params.distinctUntilChanged().mergeMap(params => {
-      this.pokemonService.load(+params['id']);
+      // this.pokemonService.load(+params['id']);
       return this.pokemonService.pokemon.map(pokemon => pokemon.find(p => p.id === +params['id']));
     });
   }

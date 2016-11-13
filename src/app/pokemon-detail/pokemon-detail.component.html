@@ -7,12 +7,13 @@
 		</div>
 		<div class="col-7 col-8@md">
 			<h1>{{(pokemon | async)?.name}}</h1>
-			<strong>Number:</strong> {{(pokemon | async)?.id}} <br />
+      <p>{{(pokemon | async)?.description}}</p>
+			<!--<strong>Number:</strong> {{(pokemon | async)?.id}} <br />
 			<strong>Height:</strong> {{(pokemon | async)?.height}}<br />
-			<strong>Weight:</strong> {{(pokemon | async)?.weight}}
+			<strong>Weight:</strong> {{(pokemon | async)?.weight}}-->
 		</div>
 	</div>
-	<div class="flex-row">
+	<!--<div class="flex-row">
 		<div class="col">
 			<p>
 				<strong>Types:</strong>
@@ -26,10 +27,6 @@
           {{move.move.name}} 
         </span>
 			</p>
-
-			<!--<pre>
-				{{pokemon | async | json}}
-			</pre>-->
 		</div>
-	</div>
+	</div>-->
 </div>
