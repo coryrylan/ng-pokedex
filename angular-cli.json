@@ -1,6 +1,6 @@
 {
   "project": {
-    "version": "1.0.0-beta.19-3",
+    "version": "1.0.0-beta.20-4",
     "name": "ng-pokedex"
   },
   "apps": [
@@ -10,7 +10,8 @@
       "assets": [
         "assets",
         "favicon.ico",
-        "manifest.json"
+        "manifest.json",
+        "service-worker.js"
       ],
       "index": "index.html",
       "main": "main.ts",

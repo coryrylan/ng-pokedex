@@ -1,13 +1,18 @@
 <div *ngIf="(pokemon | async)?.id">
 	<div class="flex-row">
 		<div class="col-5 col-4@md">
-			<div class="card">
-				<i [class]="'sprite sprite-' + (pokemon | async)?.id"></i>
-			</div>
+			<i [class]="'sprite sprite-' + (pokemon | async)?.id"></i>
 		</div>
 		<div class="col-7 col-8@md">
-			<h1>{{(pokemon | async)?.name}}</h1>
-      <p>{{(pokemon | async)?.description}}</p>
+			<h1>{{(pokemon | async)?.name}} #{{(pokemon | async)?.id}}</h1>
+      <div *ngFor="let type of (pokemon | async)?.types" class="type" [ngClass]="type">
+        {{type}}
+      </div>
+			<p>
+				<strong>Weight:</strong> {{(pokemon | async)?.weight / 10}} m
+				<strong>Height:</strong> {{(pokemon | async)?.height / 10}} kg
+			</p>
+			<p>{{(pokemon | async)?.description}}</p>
 			<!--<strong>Number:</strong> {{(pokemon | async)?.id}} <br />
 			<strong>Height:</strong> {{(pokemon | async)?.height}}<br />
 			<strong>Weight:</strong> {{(pokemon | async)?.weight}}-->

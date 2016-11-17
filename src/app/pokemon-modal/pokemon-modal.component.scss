@@ -39,6 +39,8 @@
 
     @media (min-width: 720px) {
       width: 92%;
+      margin: 30px auto;
+      min-height: initial;
     }
 
     @media (min-width: 1024px) {
@@ -58,7 +60,7 @@
     text-decoration: none;
     display: block;
     float: right;
-    padding: 12px 18px;
+    padding: 14px 18px 12px 18px;
     font-size: 1.2em;
     color: $color-white;
     border: 0;
