@@ -24,10 +24,6 @@
   background-color: $color-white;
   border-radius: 3px;
   float: left;
-  
-  @media (min-width: 1650px) {
-    min-height: 284px;
-  }
 
   &__img {
     background-color: $color-img-background;
@@ -39,18 +35,10 @@
     right: 0;
     width: 100%;
     height: 144px;
-
-    @media (min-width: 1650px) {
-      height: 209px;
-    }
   }
 
   &__content {
     color: $color-grey-dark;
     margin-top: 20px;
-
-    @media (min-width: 1650px) {
-      margin-top: 205px;
-    }
   }
 }
