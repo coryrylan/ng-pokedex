@@ -71,3 +71,11 @@ linear-gradient(lighten(desaturate($color-pokedex-red, 5%), 2%) 50%, $color-whit
   -webkit-animation: spin 4s infinite linear;
   animation: spin 4s infinite linear;
 }
+
+.scrollbar-measure {
+	width: 100px;
+	height: 100px;
+	overflow: scroll;
+	position: absolute;
+	top: -9999px;
+}

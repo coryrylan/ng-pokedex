@@ -1,4 +1,4 @@
-<div *ngIf="(pokemon | async)?.id">
+<div #view *ngIf="(pokemon | async)?.id">
 	<div class="flex-row">
 		<div class="col-5 col-4@md">
 			<i [class]="'sprite sprite-' + (pokemon | async)?.id"></i>
@@ -9,29 +9,10 @@
         {{type}}
       </div>
 			<p>
-				<strong>Weight:</strong> {{(pokemon | async)?.weight / 10}} m
-				<strong>Height:</strong> {{(pokemon | async)?.height / 10}} kg
+				<strong>Height:</strong> {{(pokemon | async)?.height / 10}} m
+        <strong>Weight:</strong> {{(pokemon | async)?.weight / 10}} kg
 			</p>
 			<p>{{(pokemon | async)?.description}}</p>
-			<!--<strong>Number:</strong> {{(pokemon | async)?.id}} <br />
-			<strong>Height:</strong> {{(pokemon | async)?.height}}<br />
-			<strong>Weight:</strong> {{(pokemon | async)?.weight}}-->
 		</div>
 	</div>
-	<!--<div class="flex-row">
-		<div class="col">
-			<p>
-				<strong>Types:</strong>
-				<span *ngFor="let type of (pokemon | async)?.types">
-          {{type.type.name}} 
-        </span>
-			</p>
-			<p>
-				<strong>Moves:</strong>
-				<span *ngFor="let move of (pokemon | async)?.moves">
-          {{move.move.name}} 
-        </span>
-			</p>
-		</div>
-	</div>-->
 </div>

@@ -7,7 +7,10 @@ import { AboutComponent } from './about/about.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'pokemon', component: PokemonListComponent },
-  { path: ':id', component: PokemonModalComponent, outlet: 'id' },
+  {
+    path: 'pokemon', component: PokemonListComponent, children: [
+      { path: ':id', component: PokemonModalComponent }
+    ]
+  },
   { path: 'about', component: AboutComponent }
 ];

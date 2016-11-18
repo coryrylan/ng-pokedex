@@ -1,6 +1,6 @@
-import { Observable } from 'rxjs/Observable';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/distinctUntilChanged';
 
@@ -16,12 +16,11 @@ export class PokemonDetailComponent implements OnInit {
   pokemon: Observable<Pokemon>;
 
   constructor(
-    private router: ActivatedRoute, 
+    private router: ActivatedRoute,
     private pokemonService: PokemonService) { }
 
   ngOnInit() {
     this.pokemon = this.router.params.distinctUntilChanged().mergeMap(params => {
-      // this.pokemonService.load(+params['id']);
       return this.pokemonService.pokemon.map(pokemon => pokemon.find(p => p.id === +params['id']));
     });
   }

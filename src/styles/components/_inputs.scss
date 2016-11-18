@@ -1,0 +1,119 @@
+$placeholder-color: #A9A9A9;
+
+input[type=text], input[type=date], textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #9e9e9e;
+  border-radius: 0;
+  outline: none;
+  height: 3rem;
+  width: 100%;
+  font-size: 1rem;
+  margin: 0 0 12px 0;
+  padding: 0;
+  box-shadow: none;
+  transition: all 0.3s;
+
+  &:focus {
+    border-bottom: 1px solid $color-pokedex-red;
+    box-shadow: 0 1px 0 0 $color-pokedex-red;
+  }
+}
+
+label {
+  font-size: 0.9em;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+::-webkit-input-placeholder {
+   color: $placeholder-color;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $placeholder-color; 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $placeholder-color;
+}
+
+:-ms-input-placeholder {  
+   color: $placeholder-color;
+}
+
+.search-card {
+  position: relative;
+  
+  &__input, input[type=text] {
+    width: 100%;
+    background-color: #fff;
+    padding: 0 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 8px;
+
+    &:focus {
+      border: 1px solid #ccc;
+      box-shadow: 0 0 0 0;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 3px;
+    top: 5px;
+    padding: 3px 10px 8px 10px;
+    background-color: transparent;
+    border: 0;
+    color: #ccc;
+    font-size: 1.6em;
+  }
+}
+
+.input-range {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 2px;
+  background: 0 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: 0;
+  padding: 0;
+  color: $color-pokedex-red;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.input-field {
+  position: relative;
+
+  label {
+    position: absolute;
+    top: 0;
+  }
+
+  input, textarea {
+    margin-top: 13px;
+
+    &:focus + label {
+      transition: all 0.3s;
+      color: $color-pokedex-red;
+    }
+  }
+
+  textarea {
+    margin-top: 20px;
+  }
+}
+
+.input-group {
+  
+}
