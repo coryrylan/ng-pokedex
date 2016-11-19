@@ -79,3 +79,9 @@ linear-gradient(lighten(desaturate($color-pokedex-red, 5%), 2%) 50%, $color-whit
 	position: absolute;
 	top: -9999px;
 }
+
+@media (max-width: 350px) {
+  [class^="flex-row"] > .col, [class^="flex-row"] > [class^="col-"] {
+    padding: 0 4px 8px 4px;
+  }
+}

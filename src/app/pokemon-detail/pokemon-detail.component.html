@@ -1,9 +1,9 @@
 <div #view *ngIf="(pokemon | async)?.id">
 	<div class="flex-row">
-		<div class="col-5 col-4@md">
+		<div class="col-12 col-5@sm col-4@md">
 			<i [class]="'sprite sprite-' + (pokemon | async)?.id"></i>
 		</div>
-		<div class="col-7 col-8@md">
+		<div class="col-12 col-7@sm col-8@md">
 			<h1>{{(pokemon | async)?.name}} #{{(pokemon | async)?.id}}</h1>
       <div *ngFor="let type of (pokemon | async)?.types" class="type" [ngClass]="type">
         {{type}}

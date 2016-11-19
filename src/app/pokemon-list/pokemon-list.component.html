@@ -4,7 +4,7 @@
 			<input type="text" aria-label="Search" placeholder="Search" formControlName="search" />
 		</form>
 	</div>
-	<div *ngFor="let p of pokemon" class="col-6 col-3@md col-2@lg">
+	<div *ngFor="let p of pokemon" class="col-6 col-4@md col-2@lg">
 		<a [routerLink]="['./', p.id]" class="card--media">
 			<i [class]="' sprite sprite-' + p.id"></i>
 			<div class="card--media__content">
