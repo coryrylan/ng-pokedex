@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
 import { Pokemon } from './../shared/interfaces/pokemon';
@@ -15,11 +16,13 @@ export class PokemonListComponent implements OnInit {
   pokemon: Pokemon[];
 
   constructor(
+    private title: Title,
     private router: Router,
     private formBuilder: FormBuilder,
     private pokemonService: PokemonService) { }
 
   ngOnInit() {
+    this.title.setTitle('Search for Pokémon');
     this.searchForm = this.formBuilder.group({
       search: ['']
     });
