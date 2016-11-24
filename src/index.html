@@ -12,6 +12,16 @@
   <meta name="description" content="A Open Source Pokédex built with Angular">
   <meta name="keywords" content="Angular, Pokémon, Pokédex, JavaScript">
 
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-36671151-9', 'auto');
+    ga('send', 'pageview');
+  </script>
+
   <style>
     body {background-color:#ededed}main {display:flex;min-height:93vh;flex-direction:column}
     .pokeball::after,.pokeball::before{content:'';display:block}.pokeball,.pokeball::after{border-radius:50%;left:50%}.pokeball,.pokeball::after,.pokeball::before{position:absolute;top:50%}.pokeball{background:-webkit-radial-gradient(circle at top left,rgba(255,255,255,.3),rgba(0,0,0,0)),-webkit-radial-gradient(circle at bottom right,rgba(0,0,0,.1),rgba(0,0,0,0)),-webkit-linear-gradient(#eb615e 50%,#fff 49%);background:radial-gradient(circle at top left,rgba(255,255,255,.3),rgba(0,0,0,0)),radial-gradient(circle at bottom right,rgba(0,0,0,.1),rgba(0,0,0,0)),linear-gradient(#eb615e 50%,#fff 49%);background:-webkit-linear-gradient(#eb615e 50%,#fff 49%);background:linear-gradient(#eb615e 50%,#fff 49%);height:12rem;margin:-6rem 0 0 -6rem;overflow:hidden;width:12rem}.pokeball::before{background:#4c4c4c;height:1.5rem;margin-top:-.75rem;width:100%}.pokeball::after{background:#fff;box-shadow:inset 0 0 0 .25rem #fff,inset 0 0 0 .5rem #4c4c4c,0 0 0 1rem #4c4c4c;height:2rem;margin:-1rem 0 0 -1rem;width:2rem}@-webkit-keyframes spin{from{-webkit-transform:rotate(0)}to{-webkit-transform:rotate(360deg)}}@keyframes spin{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.pokeball.spin{-webkit-animation:spin 2s infinite linear;animation:spin 2s infinite linear}
