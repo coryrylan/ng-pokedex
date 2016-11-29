@@ -1,16 +1,16 @@
-<div layout="row">
-	<div layout="col 12">
+<div bp-layout="row">
+	<div bp-layout="col 12">
 		<form [formGroup]="searchForm" (submit)="submit()" class="input">
 			<input type="text" aria-label="Search" placeholder="Search" formControlName="search" />
 		</form>
 	</div>
 </div>
-<div layout="row">
-	<div *ngFor="let p of pokemon" layout="col 6 4@md 2@lg">
+<div bp-layout="row">
+	<div *ngFor="let p of pokemon" bp-layout="col 6 4@md 2@lg">
 		<a [routerLink]="['./', p.id]" class="card--media">
 			<i [class]="' sprite sprite-' + p.id"></i>
 			<div class="card--media__content">
-				{{p.name}} <span layout="float-right">#{{p.id}}</span>
+				{{p.name}} <span bp-layout="float-right">#{{p.id}}</span>
 			</div>
 		</a>
 	</div>
