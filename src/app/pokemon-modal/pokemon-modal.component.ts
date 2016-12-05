@@ -13,8 +13,8 @@ export enum MODAL_KEYS {
 
 @Component({
   selector: 'app-pokemon-modal',
-  templateUrl: 'pokemon-modal.component.html',
-  styleUrls: ['pokemon-modal.component.scss'],
+  templateUrl: './pokemon-modal.component.html',
+  styleUrls: ['./pokemon-modal.component.scss'],
   animations: [trigger('modal', AnimationService.fadeIn)]
 })
 export class PokemonModalComponent implements OnInit, OnDestroy {
