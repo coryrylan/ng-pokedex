@@ -1,0 +1,6 @@
+{
+  "name": "NG Pokedex",
+  "tasks": {
+    "build": "npm run build"
+  }
+}
