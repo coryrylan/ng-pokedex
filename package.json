@@ -14,7 +14,7 @@
     "build--prod": "ng build --prod --aot --no-sourcemap && npm run sw",
     "sw": "sw-precache --root=dist --config=sw-precache-config.js",
     "disk-build": "ng build && npm run sw",
-    "disk-serve": "cd dist && live-server --port=4200 --host=localhost --entry-file=/index.html"
+    "analyze-bundles": "cp -f webpack.config.js node_modules/angular-cli/models/webpack.config.js && npm run build--prod && cd dist && webpack-bundle-analyzer stats.json"
   },
   "private": true,
   "dependencies": {
@@ -47,10 +47,12 @@
     "karma-jasmine": "^1.0.2",
     "karma-remap-istanbul": "^0.2.1",
     "protractor": "~4.0.13",
+    "sass-lint": "1.10.2",
+    "sw-precache": "4.3.0",
     "ts-node": "1.2.1",
     "tslint": "^4.3.0",
     "typescript": "~2.0.3",
-    "sass-lint": "1.10.2",
-    "sw-precache": "4.3.0"
+    "webpack-bundle-analyzer": "^2.2.1",
+    "webpack-stats-plugin": "^0.1.4"
   }
 }
