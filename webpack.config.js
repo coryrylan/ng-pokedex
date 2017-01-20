@@ -1,8 +1,10 @@
-// 1. this replaces this path file node_modules/angular-cli/models/webpack.config.js
-//    with the contents here. This hacks in the webpack stats plugin
-// 2. run 'npm install -g webpack-bundle-analyzer'
-// 3. run 'npm run build--prod'
-// 4. run 'cd dist && webpack-bundle-analyzer stats.json'
+// ng new test-project
+// npm install --save-dev webpack-bundle-analyzer
+// npm install --save-dev webpack-stats-plugin
+// ng build --prod --aot --no-sourcemap
+
+// Then replace node_modules/angular-cli/models/webpack.config.js
+// with the following altered webpack config:
 
 "use strict";
 var webpack_build_typescript_1 = require('./webpack-build-typescript');
