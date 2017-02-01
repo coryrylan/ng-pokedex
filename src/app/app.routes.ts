@@ -12,5 +12,6 @@ export const routes: Routes = [
       { path: ':id', component: PokemonModalComponent }
     ]
   },
-  { path: 'about', component: AboutComponent }
+  { path: 'about', component: AboutComponent },
+  { path: 'home', component: HomeComponent }
 ];
