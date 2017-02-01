@@ -7,8 +7,8 @@ describe('ng-pokedex App', function() {
     page = new NgPokedexPage();
   });
 
-  it('should display message saying NG-Pokédex', () => {
+  it('should display heading saying NG-Pokédex', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('NG-Pokédex');
+    expect(page.getHeadingText()).toEqual('NG-Pokédex');
   });
 });

@@ -1,13 +1,13 @@
 {
-  "name": "NG Pokédex",
-  "short_name": "NG Pokédex",
+  "name": "NG-Pokédex",
+  "short_name": "NG-Pokédex",
   "theme_color": "#ef5350",
   "background_color": "#ef5350",
   "display": "standalone",
   "orientation": "portrait",
   "Scope": "/",
   "start_url": "/",
-  "description":"A fast progressive web app Pokemon Pokedex",
+  "description":"A fast progressive web app Pokemon Pokédex",
   "icons": [
     {
       "src": "assets/images/icons/icon-72x72.png",

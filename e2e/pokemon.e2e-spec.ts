@@ -2,7 +2,7 @@ import { PokemonPage } from './pokemon.po';
 import { browser } from 'protractor';
 
 function sleep() {
-  browser.driver.sleep(1500);
+  browser.driver.sleep(1500); // sleep for demonstration reasons
 }
 
 describe('ng-pokedex pokemon view', function () {

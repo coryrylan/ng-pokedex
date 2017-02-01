@@ -6,7 +6,7 @@ import { PokemonModalComponent } from './pokemon-modal/pokemon-modal.component';
 import { AboutComponent } from './about/about.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: '/pokemon', pathMatch: 'full' },
   {
     path: 'pokemon', component: PokemonListComponent, children: [
       { path: ':id', component: PokemonModalComponent }
