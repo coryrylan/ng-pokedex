@@ -7,10 +7,10 @@ export class ViewportService {
   lockScroll() {
     // Temp until I can figure out the native renderer
     if (document) {
-      let scrollDiv = document.createElement('div');
+      const scrollDiv = document.createElement('div');
       scrollDiv.className = 'scrollbar-measure';
       document.body.appendChild(scrollDiv);
-      let scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+      const scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
       document.body.removeChild(scrollDiv);
       document.body.style.overflow = 'hidden';
       document.body.style.paddingRight = scrollbarWidth + 'px';

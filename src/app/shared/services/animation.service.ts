@@ -1,4 +1,4 @@
-import { Injectable, state, style, animate, transition, 
+import { Injectable, state, style, animate, transition,
   AnimationStateDeclarationMetadata, AnimationStateTransitionMetadata } from '@angular/core';
 
 @Injectable()

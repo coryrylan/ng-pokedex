@@ -28,7 +28,7 @@ export class PokemonListComponent implements OnInit {
     });
 
     this.pokemonService.pokemon.subscribe(pokemon => {
-      let _pokemon = pokemon;
+      const _pokemon = pokemon;
       this.pokemon = _pokemon;
 
       this.searchForm.controls['search'].valueChanges.subscribe(value => {

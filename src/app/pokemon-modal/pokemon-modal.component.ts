@@ -44,12 +44,12 @@ export class PokemonModalComponent implements OnInit, OnDestroy {
     }
 
     if (event.keyCode === MODAL_KEYS.RIGHT_ARROW) {
-      let id = this.id === 1 ? 151 : this.id - 1;
+      const id = this.id === 1 ? 151 : this.id - 1;
       this.router.navigateByUrl(`/pokemon/${id}`);
     }
 
     if (event.keyCode === MODAL_KEYS.LEFT_ARROW) {
-      let id = this.id < 151 ? this.id + 1 : 1;
+      const id = this.id < 151 ? this.id + 1 : 1;
       this.router.navigateByUrl(`/pokemon/${id}`);
     }
   }
