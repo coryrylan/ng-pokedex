@@ -11,7 +11,7 @@
     "pree2e": "webdriver-manager update --standalone false --gecko false",
     "e2e": "protractor",
     "build": "ng build",
-    "build--prod": "ng build --prod --aot --no-sourcemap && npm run sw",
+    "build--prod": "ng lint && ng build --prod --aot --no-sourcemap && npm run sw",
     "sw": "sw-precache --root=dist --config=sw-precache-config.js",
     "disk-build": "ng build && npm run sw",
     "analyze-bundles": "cp -f webpack.config.js node_modules/angular-cli/models/webpack.config.js && npm run build--prod && cd dist && webpack-bundle-analyzer stats.json"
