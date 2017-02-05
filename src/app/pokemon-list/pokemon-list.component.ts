@@ -40,6 +40,4 @@ export class PokemonListComponent implements OnInit {
       });
     });
   }
-
-  submit() { }
 }

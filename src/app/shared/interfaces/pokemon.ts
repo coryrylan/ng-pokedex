@@ -35,6 +35,7 @@ export interface Type {
 export interface Pokemon {
   id: number;
   name: string;
+  description: string;
   url?: string;
   base_experience?: number;
   height?: number;

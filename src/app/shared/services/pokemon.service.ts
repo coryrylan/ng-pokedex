@@ -18,14 +18,13 @@ export class PokemonService {
   constructor(private http: Http) {
     this.store = { pokemon: pokemonData };
     this._pokemon = new BehaviorSubject(Object.assign({}, this.store).pokemon);
-    this.pokemon = this._pokemon.asObservable().map(pokemon => {
-      pokemon.forEach(p => {
-        p = this.parseId(p);
-        p = this.upperCaseName(p);
-      });
+    this.pokemon = this._pokemon.asObservable().map(pokemon => pokemon.map(p => this.setPokemon(p)));
+  }
 
-      return pokemon.slice(0);
-    });
+  private setPokemon(pokemon: Pokemon) {
+    pokemon = this.parseId(pokemon);
+    pokemon = this.upperCaseName(pokemon);
+    return pokemon;
   }
 
   private parseId(pokemon: Pokemon) {
