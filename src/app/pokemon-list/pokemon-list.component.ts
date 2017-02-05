@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/operator/startWith';
 
 import { Pokemon } from './../shared/interfaces/pokemon';
 import { PokemonService } from './../shared/services/pokemon.service';
@@ -13,7 +16,7 @@ import { PokemonService } from './../shared/services/pokemon.service';
 })
 export class PokemonListComponent implements OnInit {
   searchForm: FormGroup;
-  pokemon: Pokemon[];
+  pokemon: Observable<Pokemon[]>;
 
   constructor(
     private title: Title,
@@ -27,17 +30,13 @@ export class PokemonListComponent implements OnInit {
       search: ['']
     });
 
-    this.pokemonService.pokemon.subscribe(pokemon => {
-      const _pokemon = pokemon;
-      this.pokemon = _pokemon;
+    this.pokemon = this.pokemonService.pokemon.switchMap(pokemon =>
+      this.searchForm.controls['search'].valueChanges
+        .map(value => this.search(pokemon, value))
+        .startWith(pokemon));
+  }
 
-      this.searchForm.controls['search'].valueChanges.subscribe(value => {
-        if (value.length) {
-          this.pokemon = _pokemon.filter(p => p.name.toLowerCase().includes(value.toLowerCase()));
-        } else {
-          this.pokemon = _pokemon;
-        }
-      });
-    });
+  private search(pokemon: Pokemon[], value: string) {
+    return pokemon.filter(p => value ? p.name.toLowerCase().includes(value.toLowerCase()) : pokemon);
   }
 }

@@ -6,7 +6,7 @@
 	</div>
 </div>
 <div bp-layout="row">
-	<div *ngFor="let p of pokemon" bp-layout="col 6 4@md 2@lg">
+	<div *ngFor="let p of pokemon | async" bp-layout="col 6 4@md 2@lg">
 		<a [routerLink]="['./', p.id]" class="card--media">
 			<i [class]="' sprite sprite-' + p.id"></i>
 			<div class="card--media__content">
