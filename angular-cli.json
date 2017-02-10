@@ -10,7 +10,6 @@
       "assets": [
         "assets",
         "favicon.ico",
-        "favicon.ico",
         "manifest.json",
         "service-worker.js"
       ],
