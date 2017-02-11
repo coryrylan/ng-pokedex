@@ -1,7 +1,15 @@
 {
-  "name": "NG Pokedex",
+  "name": "ng-pokedex",
   "tasks": {
+    "install": "npm install",
+    "lint": "npm run lint",
+    "test": "npm run test",
     "build": "npm run build",
-    "build--prod": "npm run build--prod"
-  }
+    "build--prod": "npm run build--prod",
+    "deploy": "npm run build--prod && npm run deploy"
+  },
+  "external": [
+    "https://www.npmjs.com/"
+  ],
+  "dependencies": []
 }
