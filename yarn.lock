@@ -548,9 +548,9 @@ bluebird@^3.3.0, bluebird@^3.4.7:
   version "3.4.7"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.4.7.tgz#f72d760be09b7f76d08ed8fae98b289a8d05fab3"
 
-blueprint-css@2.0.0-beta.5:
-  version "2.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/blueprint-css/-/blueprint-css-2.0.0-beta.5.tgz#a56b688f23cc50af21ffda535e21be6ec14ce680"
+blueprint-css@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/blueprint-css/-/blueprint-css-2.1.0.tgz#090e7072b8b9b039f13cc91924af08e121284dd6"
 
 bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
   version "4.11.6"

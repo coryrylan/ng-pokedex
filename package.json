@@ -30,7 +30,7 @@
     "ts-helpers": "^1.1.1",
     "zone.js": "^0.7.2",
     "intl": "^1.2.5",
-    "blueprint-css": "2.0.0-beta.5"
+    "blueprint-css": "2.1.0"
   },
   "devDependencies": {
     "@angular/cli": "^1.0.0-beta.32.3",
