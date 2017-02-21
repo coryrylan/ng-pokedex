@@ -9,7 +9,7 @@
     "deploy": "yarn run build--prod && firebase deploy"
   },
   "external": [
-    "https://www.npmjs.com/",
+    "https://yarnpkg.com/",
     "https://firebase.google.com/"
   ],
   "dependencies": []
