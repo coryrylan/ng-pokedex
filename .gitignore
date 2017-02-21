@@ -14,6 +14,8 @@
 .c9/
 *.launch
 .settings/
+arbor-info.log
+arbor-live.log
 
 # IDE - VSCode
 .vscode/*
