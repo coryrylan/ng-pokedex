@@ -20,7 +20,6 @@ describe('ng-pokedex pokemon view', function () {
   it('should open and view a particular pokemon', () => {
     page.navigateTo();
     page.getFirstPokemonCardElement().click();
-    sleep();
 
     expect(page.getOpenModalElement()).toBeTruthy();
     expect(page.getOpenModalHeadingElement().getText()).toBe('Bulbasaur #1');
@@ -29,19 +28,12 @@ describe('ng-pokedex pokemon view', function () {
   it('should open and allow arrow keys to navigate between pokemon', () => {
     page.navigateTo();
     page.getFirstPokemonCardElement().click();
-
-    sleep();
     page.selectNextKey();
 
     expect(page.getOpenModalHeadingElement().getText()).toBe('Ivysaur #2');
 
-    sleep();
     page.selectPrevKey();
-
-    sleep();
     page.selectPrevKey();
-
-    sleep();
     expect(page.getOpenModalHeadingElement().getText()).toBe('Mew #151');
   });
 });
