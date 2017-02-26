@@ -49,6 +49,6 @@
     "tslint": "~4.4.2",
     "typescript": "~2.0.0",
     "sass-lint": "1.10.2",
-    "sw-precache": "4.3.0"
+    "sw-precache": "5.0.0"
   }
 }
