@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { routes } from './app.routes';
@@ -31,7 +30,6 @@ import { PokemonModalComponent } from './pokemon-modal/pokemon-modal.component';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    HttpModule,
     RouterModule.forRoot(routes)
   ],
   providers: [

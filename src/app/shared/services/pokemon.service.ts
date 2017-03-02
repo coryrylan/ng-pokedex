@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import 'rxjs/add/operator/map';
@@ -15,7 +14,7 @@ export class PokemonService {
 
   // Wapping the data in an Observable as the underlying implementation
   // will eventually call an API and cache the data
-  constructor(private http: Http) {
+  constructor() {
     this.store = { pokemon: pokemonData };
     this._pokemon = new BehaviorSubject(Object.assign({}, this.store).pokemon);
     this.pokemon = this._pokemon.asObservable().map(pokemon => pokemon.map(p => this.setPokemon(p)));

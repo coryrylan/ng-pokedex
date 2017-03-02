@@ -12,7 +12,8 @@
     "build": "ng build",
     "build--prod": "npm run lint && ng build --prod --no-sourcemap --stats-json && npm run sw",
     "sw": "sw-precache --root=dist --config=sw-precache-config.js",
-    "deploy": "npm run build--prod && firebase deploy"
+    "deploy": "npm run build--prod && firebase deploy",
+    "bundle-report": "webpack-bundle-analyzer dist/stats.json"
   },
   "private": true,
   "dependencies": {
@@ -49,6 +50,7 @@
     "tslint": "~4.4.2",
     "typescript": "~2.0.0",
     "sass-lint": "1.10.2",
-    "sw-precache": "5.0.0"
+    "sw-precache": "5.0.0",
+    "webpack-bundle-analyzer": "2.3.0"
   }
 }
