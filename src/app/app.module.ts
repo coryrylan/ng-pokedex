@@ -1,12 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './common/core/core.module';
+import { SharedModule } from './common/shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { PokemonService } from './shared/services/pokemon.service';
-import { ViewportService } from './shared/services/viewport.service';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { HomeComponent } from './home/home.component';
 import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
@@ -24,13 +23,11 @@ import { PokemonModalComponent } from './pokemon-modal/pokemon-modal.component';
   ],
   imports: [
     BrowserModule,
+    CoreModule.forRoot(),
     SharedModule,
     AppRoutingModule
   ],
-  providers: [
-    PokemonService,
-    ViewportService
-  ],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

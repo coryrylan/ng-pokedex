@@ -3,8 +3,8 @@ import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import 'rxjs/add/operator/map';
 
-import { Pokemon } from '../interfaces/pokemon';
-import { pokemonData } from './../data';
+import { Pokemon } from './../../interfaces/pokemon';
+import { pokemonData } from './data';
 
 @Injectable()
 export class PokemonService {
