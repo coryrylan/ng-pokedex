@@ -6,8 +6,8 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/startWith';
 
-import { Pokemon } from './../common/interfaces/pokemon';
-import { PokemonService } from './../common/core/services/pokemon.service';
+import { Pokemon } from './../../common/interfaces/pokemon';
+import { PokemonService } from './../../common/core/services/pokemon.service';
 
 @Component({
   selector: 'app-pokemon-list',

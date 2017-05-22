@@ -2,8 +2,8 @@ import { Component, OnInit, OnDestroy, trigger, HostListener } from '@angular/co
 import { Location } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
 
-import { AnimationService } from './../common/core/services/animation.service';
-import { ViewportService } from './../common/core/services/viewport.service';
+import { AnimationService } from './../../common/core/services/animation.service';
+import { ViewportService } from './../../common/core/services/viewport.service';
 
 export enum MODAL_KEYS {
   ESCAPE = 27,

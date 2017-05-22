@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
-import { PokemonModalComponent } from './pokemon-modal/pokemon-modal.component';
+import { PokemonListComponent } from './pokemon/pokemon-list/pokemon-list.component';
+import { PokemonModalComponent } from './pokemon/pokemon-modal/pokemon-modal.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/pokemon', pathMatch: 'full' },
