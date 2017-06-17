@@ -1,18 +1,18 @@
 <div bp-layout="row">
 	<div bp-layout="col 12">
-		<form [formGroup]="searchForm" class="input">
-			<input type="text" aria-label="Search" placeholder="Search" formControlName="search" />
-		</form>
+		<app-form-search (formChange)="search($event)"></app-form-search>
 	</div>
 </div>
+
 <div bp-layout="row">
-	<div *ngFor="let p of pokemon | async" bp-layout="col 6 4@md 2@lg">
-		<a [routerLink]="['./', p.id]" class="card--media">
+  <div *ngFor="let p of pokemon | async" bp-layout="col 6 4@md 2@lg">
+    <a [routerLink]="['./', p.id]" class="card--media">
 			<i [class]="' sprite sprite-' + p.id"></i>
 			<div class="card--media__content">
 				{{p.name}} <span bp-layout="float-right">#{{p.id}}</span>
 			</div>
 		</a>
-	</div>
+  </div>
 </div>
+
 <router-outlet></router-outlet>

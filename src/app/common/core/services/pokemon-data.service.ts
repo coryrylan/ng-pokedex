@@ -7,7 +7,7 @@ import { Pokemon } from './../../interfaces/pokemon';
 import { pokemonData } from './data';
 
 @Injectable()
-export class PokemonService {
+export class PokemonDataService {
   pokemon: Observable<Pokemon[]>;
   private _pokemon: BehaviorSubject<Pokemon[]>;
   private store: { pokemon: any[] };

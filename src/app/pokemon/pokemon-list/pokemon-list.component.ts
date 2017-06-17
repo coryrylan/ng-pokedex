@@ -1,42 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { Title } from '@angular/platform-browser';
-import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/switchMap';
-import 'rxjs/add/operator/startWith';
 
 import { Pokemon } from './../../common/interfaces/pokemon';
-import { PokemonService } from './../../common/core/services/pokemon.service';
+import { PokemonService } from './pokemon.service';
 
 @Component({
   selector: 'app-pokemon-list',
   templateUrl: './pokemon-list.component.html',
-  styleUrls: ['./pokemon-list.component.scss']
+  styleUrls: ['./pokemon-list.component.scss'],
+  providers: [PokemonService]
 })
 export class PokemonListComponent implements OnInit {
-  searchForm: FormGroup;
   pokemon: Observable<Pokemon[]>;
+  showGrid = true;
 
   constructor(
-    private title: Title,
-    private router: Router,
-    private formBuilder: FormBuilder,
     private pokemonService: PokemonService) { }
 
   ngOnInit() {
-    this.title.setTitle('Search for Pokémon');
-    this.searchForm = this.formBuilder.group({
-      search: ['']
-    });
-
-    this.pokemon = this.pokemonService.pokemon.switchMap(pokemon =>
-      this.searchForm.controls['search'].valueChanges
-        .map(value => this.search(pokemon, value))
-        .startWith(pokemon));
+    this.pokemonService.setTitle();
+    this.pokemon = this.pokemonService.pokemon;
   }
 
-  private search(pokemon: Pokemon[], value: string) {
-    return pokemon.filter(p => value ? p.name.toLowerCase().includes(value.toLowerCase()) : pokemon);
+  search(term: string) {
+    this.pokemonService.search(term);
   }
 }

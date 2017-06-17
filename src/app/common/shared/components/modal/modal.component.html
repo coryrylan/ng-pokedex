@@ -1,4 +1,4 @@
-<div role="dialog" aria-label="Pokémon Details" class="modal" tabindex="-1">
+<div *ngIf="visible" role="dialog" class="modal" tabindex="-1">
   <div [@modal] class="modal__inner">
     <header class="modal__header" bp-layout="clear-fix">
       <button (click)="close()" class="modal__btn" title="Close" aria-label="Close">
@@ -6,7 +6,7 @@
       </button>
     </header>
     <div class="modal__view">
-      <app-pokemon-detail></app-pokemon-detail>
+      <ng-content></ng-content>
     </div>
   </div>
   <div (click)="close()" class="modal-background"></div>
