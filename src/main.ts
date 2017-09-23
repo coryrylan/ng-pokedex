@@ -9,7 +9,8 @@ if (environment.production) {
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule)
-  .then(() => registerServiceWorker());
+  .then(() => registerServiceWorker())
+  .catch(err => console.log(err));
 
 function registerServiceWorker() {
   if ('serviceWorker' in navigator) {
