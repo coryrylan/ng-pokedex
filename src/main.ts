@@ -8,7 +8,11 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
+platformBrowserDynamic().bootstrapModule(AppModule,
+  {
+    preserveWhitespaces: false,
+    // ngZone: 'noop'
+  })
   .then(() => registerServiceWorker())
   .catch(err => console.log(err));
 
