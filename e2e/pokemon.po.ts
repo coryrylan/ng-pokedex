@@ -14,11 +14,11 @@ export class PokemonPage {
   }
 
   getOpenModalElement() {
-    return element(by.tagName('app-pokemon-modal'));
+    return element(by.tagName('app-modal'));
   }
 
   getOpenModalHeadingElement() {
-    return element(by.css('app-pokemon-modal h1'));
+    return element(by.css('app-modal h1'));
   }
 
   selectNextKey() {
