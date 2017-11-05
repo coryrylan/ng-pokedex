@@ -1,7 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import 'rxjs/add/operator/map';
+
+// https://github.com/angular/angular-cli/issues/8165
+// https://github.com/ReactiveX/rxjs/issues/2988
+// import { map } from 'rxjs/operators';
+import { map } from 'rxjs/operators/map';
 
 import { Pokemon } from './../../interfaces/pokemon';
 import { pokemonData } from './data';
@@ -17,7 +21,10 @@ export class PokemonDataService {
   constructor() {
     this.store = { pokemon: pokemonData };
     this._pokemon = new BehaviorSubject(Object.assign({}, this.store).pokemon);
-    this.pokemon = this._pokemon.asObservable().map(pokemon => pokemon.map(p => this.setPokemon(p)));
+    this.pokemon = this._pokemon.asObservable()
+      .pipe(
+        map(pokemon => pokemon.map(p => this.setPokemon(p)))
+      );
   }
 
   private setPokemon(pokemon: Pokemon) {
