@@ -6,6 +6,10 @@
     "public": "dist",
     "rewrites": [
       {
+        "source": "/service-worker.js",
+        "destination": "/ngsw-worker.js"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
