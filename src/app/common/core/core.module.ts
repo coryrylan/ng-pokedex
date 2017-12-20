@@ -1,4 +1,5 @@
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
 
 import { ViewportService } from './services/viewport.service';
@@ -6,10 +7,11 @@ import { PokemonDataService } from './services/pokemon-data.service';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   declarations: [],
-  exports: []
+  exports: [HttpClientModule]
 })
 export class CoreModule {
   static forRoot(): ModuleWithProviders {
@@ -18,7 +20,7 @@ export class CoreModule {
       providers: [
         PokemonDataService,
         ViewportService
-      ]
+      ],
     };
   }
 

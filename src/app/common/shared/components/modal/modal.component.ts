@@ -1,7 +1,6 @@
 import { Component, EventEmitter, HostListener, Input, OnInit, OnDestroy, Output } from '@angular/core';
 import { trigger } from '@angular/animations';
 
-import { AnimationService } from './../../../core/services/animation.service';
 import { ViewportService } from './../../../core/services/viewport.service';
 
 export enum MODAL_KEYS {
@@ -14,7 +13,6 @@ export enum MODAL_KEYS {
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss'],
-  animations: [trigger('modal', AnimationService.fadeIn)]
 })
 export class ModalComponent implements OnInit, OnDestroy {
   @Input() visible;

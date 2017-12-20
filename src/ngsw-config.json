@@ -1,27 +1,45 @@
 {
   "index": "/index.html",
-  "assetGroups": [{
-    "name": "app",
-    "installMode": "prefetch",
-    "resources": {
-      "files": [
-        "/favicon.ico",
-        "/index.html"
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "resources": {
+        "files": [
+          "/favicon.ico",
+          "/index.html"
+        ],
+        "versionedFiles": [
+          "/*.bundle.css",
+          "/*.bundle.js",
+          "/*.chunk.js"
+        ]
+      }
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/assets/images/pokemon.png",
+          "/assets/images/pokeball.png"
+        ]
+      }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "api",
+      "urls": [
+        "/api/pokemon.json"
       ],
-      "versionedFiles": [
-        "/*.bundle.css",
-        "/*.bundle.js",
-        "/*.chunk.js"
-      ]
+      "cacheConfig": {
+        "strategy": "performance",
+        "maxSize": 15,
+        "maxAge": "1h",
+        "timeout": "5s"
+      }
     }
-  }, {
-    "name": "assets",
-    "installMode": "lazy",
-    "updateMode": "prefetch",
-    "resources": {
-      "files": [
-        "/assets/**"
-      ]
-    }
-  }]
+  ]
 }
