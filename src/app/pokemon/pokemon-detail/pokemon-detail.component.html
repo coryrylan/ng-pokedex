@@ -1,20 +1,16 @@
 <app-modal [visible]="true" (visibleChange)="close()" (next)="next()" (previous)="previous()">
-  <div #view *ngIf="pokemon | async; let pokemon">
-    <div bp-layout="row">
-      <div bp-layout="col 5@sm 4@md">
-        <i [class]="'sprite sprite-' + pokemon.id"></i>
+  <div bp="grid" #view *ngIf="pokemon | async; let pokemon">
+    <i bp="5@sm 4@md" [class]="'sprite sprite-' + pokemon.id"></i>
+    <div bp="7@sm 8@md">
+      <h1>{{pokemon.name}} #{{pokemon.id}}</h1>
+      <div *ngFor="let type of pokemon.types" class="type" [ngClass]="type">
+        {{type}}
       </div>
-      <div bp-layout="col 7@sm 8@md">
-        <h1>{{pokemon.name}} #{{pokemon.id}}</h1>
-        <div *ngFor="let type of pokemon.types" class="type" [ngClass]="type">
-          {{type}}
-        </div>
-        <p>
-          <strong>Height:</strong> {{pokemon.height / 10}} m
-          <strong>Weight:</strong> {{pokemon.weight / 10}} kg
-        </p>
-        <p>{{pokemon.description}}</p>
-      </div>
+      <p>
+        <strong>Height:</strong> {{pokemon.height / 10}} m
+        <strong>Weight:</strong> {{pokemon.weight / 10}} kg
+      </p>
+      <p>{{pokemon.description}}</p>
     </div>
   </div>
 </app-modal>
