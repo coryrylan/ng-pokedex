@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, OnDestroy, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-form-search',

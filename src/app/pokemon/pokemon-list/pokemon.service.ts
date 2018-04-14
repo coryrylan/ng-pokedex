@@ -1,15 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs/Subject';
-
-// https://github.com/angular/angular-cli/issues/8165
-// https://github.com/ReactiveX/rxjs/issues/2988
-// import { switchMap, startWith, map } from 'rxjs/operators';
-import { switchMap } from 'rxjs/operators/switchMap';
-import { startWith } from 'rxjs/operators/startWith';
-import { tap } from 'rxjs/operators/tap';
-import { map } from 'rxjs/operators/map';
+import { Subject, Observable } from 'rxjs';
+import { map, tap, startWith, switchMap } from 'rxjs/operators';
 
 import { Pokemon } from './../../common/interfaces/pokemon';
 import { PokemonDataService } from './../../common/core/services/pokemon-data.service';
@@ -24,7 +16,7 @@ export class PokemonService {
     private pokemonDataService: PokemonDataService
   ) {
     this.pokemon = this.pokemonDataService.pokemon.pipe(
-      switchMap(pokemon => this.searchTerm.pipe(
+      switchMap((pokemon: Pokemon[]) => this.searchTerm.pipe(
         map(term => this.filter(pokemon, term)),
         startWith(pokemon)
       ))

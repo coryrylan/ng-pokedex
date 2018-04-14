@@ -1,15 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
-import { Observable } from 'rxjs/Observable';
-
-// https://github.com/angular/angular-cli/issues/8165
-// https://github.com/ReactiveX/rxjs/issues/2988
-// import { map, distinctUntilChanged, mergeMap, tap } from 'rxjs/operators';
-import { map } from 'rxjs/operators/map';
-import { distinctUntilChanged } from 'rxjs/operators/distinctUntilChanged';
-import { mergeMap } from 'rxjs/operators/mergeMap';
-import { tap } from 'rxjs/operators/tap';
+import { Observable } from 'rxjs';
+import { tap, mergeMap, map, distinctUntilChanged } from 'rxjs/operators';
 
 import { Pokemon } from './../../common/interfaces/pokemon';
 import { PokemonDataService } from './../../common/core/services/pokemon-data.service';
@@ -32,8 +25,8 @@ export class PokemonDetailComponent implements OnInit, OnDestroy {
     this.pokemon = this.activatedRoute.params
       .pipe(
         distinctUntilChanged(),
-        mergeMap(params => this.pokemonDataService.pokemon.pipe(map(pokemon => pokemon.find(p => p.id === +params.id)))),
-        tap(pokemon => this.title.setTitle(`Pokémon #${pokemon.id} ${pokemon.name}`))
+        mergeMap(params => this.pokemonDataService.pokemon.pipe(map((pokemon: Pokemon[]) => pokemon.find(p => p.id === +params.id)))),
+        tap((pokemon: Pokemon) => this.title.setTitle(`Pokémon #${pokemon.id} ${pokemon.name}`))
       );
   }
 
