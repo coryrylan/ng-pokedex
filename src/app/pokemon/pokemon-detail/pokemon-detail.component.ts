@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
-import { tap, mergeMap, map, distinctUntilChanged } from 'rxjs/operators';
+import { map, distinctUntilChanged, mergeMap, tap } from 'rxjs/operators';
 
 import { Pokemon } from './../../common/interfaces/pokemon';
 import { PokemonDataService } from './../../common/core/services/pokemon-data.service';
@@ -25,8 +25,8 @@ export class PokemonDetailComponent implements OnInit, OnDestroy {
     this.pokemon = this.activatedRoute.params
       .pipe(
         distinctUntilChanged(),
-        mergeMap(params => this.pokemonDataService.pokemon.pipe(map((pokemon: Pokemon[]) => pokemon.find(p => p.id === +params.id)))),
-        tap((pokemon: Pokemon) => this.title.setTitle(`Pokémon #${pokemon.id} ${pokemon.name}`))
+        mergeMap(params => this.pokemonDataService.pokemon.pipe(map(pokemon => pokemon.find(p => p.id === +params.id)))),
+        tap(pokemon => this.title.setTitle(`Pokémon #${pokemon.id} ${pokemon.name}`))
       );
   }
 
