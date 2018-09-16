@@ -1,4 +1,4 @@
-<app-modal [visible]="true" (visibleChange)="close()" (next)="next()" (previous)="previous()">
+<ngx-modal [visible]="true" (visibleChange)="close($event)">
   <div bp="grid" #view *ngIf="pokemon | async; let pokemon">
     <i bp="5@sm 4@md" [class]="'sprite sprite-' + pokemon.id"></i>
     <div bp="7@sm 8@md">
@@ -13,4 +13,4 @@
       <p>{{pokemon.description}}</p>
     </div>
   </div>
-</app-modal>
+</ngx-modal>

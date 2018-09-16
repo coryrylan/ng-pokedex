@@ -3,10 +3,11 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
-import { Pokemon } from './../../interfaces/pokemon';
-import { pokemonData } from './data';
+import { Pokemon } from './../interfaces/pokemon';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class PokemonDataService {
   pokemon: Observable<Pokemon[]>;
   constructor(private http: HttpClient) {

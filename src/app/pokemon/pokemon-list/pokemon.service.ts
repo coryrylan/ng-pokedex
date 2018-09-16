@@ -4,7 +4,7 @@ import { Observable, Subject } from 'rxjs';
 import { switchMap, startWith, tap, map } from 'rxjs/operators';
 
 import { Pokemon } from './../../common/interfaces/pokemon';
-import { PokemonDataService } from './../../common/core/services/pokemon-data.service';
+import { PokemonDataService } from '../../common/services/pokemon-data.service';
 
 @Injectable()
 export class PokemonService {

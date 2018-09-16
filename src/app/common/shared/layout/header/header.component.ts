@@ -11,11 +11,4 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  @HostListener('window:keyup', ['$event'])
-  outerClick(event) {
-    if (event.keyCode === 27 && this.navOpen === true) {
-      this.navOpen = false;
-    }
-  }
 }

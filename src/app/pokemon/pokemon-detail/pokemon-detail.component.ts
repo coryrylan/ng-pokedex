@@ -1,11 +1,16 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
 import { map, distinctUntilChanged, mergeMap, tap } from 'rxjs/operators';
 
 import { Pokemon } from './../../common/interfaces/pokemon';
-import { PokemonDataService } from './../../common/core/services/pokemon-data.service';
+import { PokemonDataService } from './../../common/services/pokemon-data.service';
+
+export enum MODAL_KEYS {
+  RIGHT_ARROW = 37,
+  LEFT_ARROW = 39
+}
 
 @Component({
   selector: 'app-pokemon-detail',
@@ -14,6 +19,7 @@ import { PokemonDataService } from './../../common/core/services/pokemon-data.se
 })
 export class PokemonDetailComponent implements OnInit, OnDestroy {
   pokemon: Observable<Pokemon>;
+  show = true;
 
   constructor(
     private title: Title,
@@ -34,19 +40,24 @@ export class PokemonDetailComponent implements OnInit, OnDestroy {
     this.title.setTitle('Search for Pokémon');
   }
 
-  next() {
-    const paramId = +this.activatedRoute.snapshot.params.id;
-    const id = paramId === 1 ? 151 : paramId - 1;
-    this.router.navigateByUrl(`/pokemon/${id}`);
+  close(show: boolean) {
+    if (!show) {
+      this.router.navigateByUrl('/pokemon');
+    }
   }
 
-  previous() {
-    const paramId = +this.activatedRoute.snapshot.params.id;
-    const id = paramId < 151 ? paramId + 1 : 1;
-    this.router.navigateByUrl(`/pokemon/${id}`);
-  }
+  @HostListener('window:keyup', ['$event'])
+  keyEvent(event) {
+    if (event.keyCode === MODAL_KEYS.RIGHT_ARROW) {
+      const paramId = +this.activatedRoute.snapshot.params.id;
+      const id = paramId === 1 ? 151 : paramId - 1;
+      this.router.navigateByUrl(`/pokemon/${id}`);
+    }
 
-  close() {
-    this.router.navigateByUrl('/pokemon');
+    if (event.keyCode === MODAL_KEYS.LEFT_ARROW) {
+      const paramId = +this.activatedRoute.snapshot.params.id;
+      const id = paramId < 151 ? paramId + 1 : 1;
+      this.router.navigateByUrl(`/pokemon/${id}`);
+    }
   }
 }

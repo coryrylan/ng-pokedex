@@ -2,30 +2,34 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgxNavDrawerModule } from '@ngx-lite/nav-drawer';
+import { NgxModalModule } from '@ngx-lite/modal';
 
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
-import { ModalComponent } from './components/modal/modal.component';
 import { FormSearchComponent } from './components/form-search/form-search.component';
 
 const components = [
   HeaderComponent,
   FooterComponent,
-  ModalComponent,
   FormSearchComponent
+];
+
+const modules = [
+  CommonModule,
+  RouterModule,
+  ReactiveFormsModule,
+  NgxNavDrawerModule,
+  NgxModalModule
 ];
 
 @NgModule({
   imports: [
-    CommonModule,
-    RouterModule,
-    ReactiveFormsModule
+    ...modules
   ],
   exports: [
     ...components,
-    CommonModule,
-    RouterModule,
-    ReactiveFormsModule
+    ...modules
   ],
   declarations: [...components]
 })

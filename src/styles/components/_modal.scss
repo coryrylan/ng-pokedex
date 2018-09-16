@@ -1,0 +1,20 @@
+.ngx-modal__header {
+  height: 43px;
+  overflow: hidden;
+  background-color: $color-pokedex-red;
+
+  button {
+    color: $color-white;
+    background-color: transparent;
+
+    &:hover {
+      background-color: darken($color-pokedex-red, 5%);
+    }
+  }
+}
+
+@media (min-width: 720px) {
+  .ngx-modal {
+    max-width: 720px !important;
+  }
+}
