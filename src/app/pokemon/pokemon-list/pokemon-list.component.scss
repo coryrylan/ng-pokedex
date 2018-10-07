@@ -5,4 +5,10 @@
 
 .card--media {
   height: 175px;
+  box-shadow: 3px 3px 10px rgb(168, 155, 155);
+  transition:all .2s;
+}
+.card--media:hover{
+  background-color: rgb(250, 255, 255);
+  transform: scale(1.06,1.06);
 }
