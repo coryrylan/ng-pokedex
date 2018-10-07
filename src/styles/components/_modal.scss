@@ -6,13 +6,17 @@
   button {
     color: $color-white;
     background-color: transparent;
+    outline:none;
 
     &:hover {
       background-color: darken($color-pokedex-red, 5%);
     }
   }
 }
+.ngx-modal{
+    box-shadow: 2px 2px rgb(218, 198, 198);
 
+}
 @media (min-width: 720px) {
   .ngx-modal {
     max-width: 720px !important;

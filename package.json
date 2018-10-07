@@ -22,6 +22,7 @@
     "@angular/core": "^6.0.0",
     "@angular/forms": "^6.0.0",
     "@angular/http": "^6.0.0",
+    "@angular/material": "^6.4.7",
     "@angular/platform-browser": "^6.0.0",
     "@angular/platform-browser-dynamic": "^6.0.0",
     "@angular/pwa": "^0.6.0",
@@ -33,7 +34,8 @@
     "core-js": "^2.5.4",
     "normalize.css": "^7.0.0",
     "rxjs": "^6.0.0",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "@angular/cdk": "^6.2.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.6.0",
