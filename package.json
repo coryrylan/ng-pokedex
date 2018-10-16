@@ -12,7 +12,7 @@
     "lint": "sass-lint && ng lint",
     "e2e": "ng e2e",
     "deploy": "npm run build:prod && firebase deploy",
-    "bundle-report": "webpack-bundle-analyzer dist/stats.json"
+    "bundle-report": "webpack-bundle-analyzer dist/ng-pokedex/stats.json"
   },
   "private": true,
   "dependencies": {
