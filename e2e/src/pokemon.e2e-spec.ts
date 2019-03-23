@@ -5,7 +5,7 @@ function sleep() {
   browser.driver.sleep(1500); // sleep for demonstration reasons
 }
 
-describe('ng-pokedex pokemon view', function () {
+describe('ng-pokedex pokemon view', () => {
   let page: PokemonPage;
 
   beforeEach(() => {

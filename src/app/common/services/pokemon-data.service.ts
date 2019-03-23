@@ -24,8 +24,8 @@ export class PokemonDataService {
   }
 
   private parseId(pokemon: Pokemon) {
-    if (!pokemon['id']) {
-      pokemon['id'] = +pokemon.url.match(/\/(\d+)/)[1];
+    if (!pokemon.id) {
+      pokemon.id = +pokemon.url.match(/\/(\d+)/)[1];
     }
 
     return pokemon;
