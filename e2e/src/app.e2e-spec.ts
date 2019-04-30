@@ -1,14 +1,23 @@
-import { NgPokedexPage } from './app.po';
+import { AppPage } from './app.po';
+import { browser, logging } from 'protractor';
 
-describe('ng-pokedex App', () => {
-  let page: NgPokedexPage;
+describe('workspace-project App', () => {
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new NgPokedexPage();
+    page = new AppPage();
   });
 
-  // it('should display heading saying NG-Pokédex', () => {
-  //   page.navigateTo();
-  //   expect(page.getHeadingText()).toEqual('NG-Pokédex');
-  // });
+  it('should display welcome message', () => {
+    page.navigateTo();
+    expect(page.getTitleText()).toEqual('Welcome to ng-cli-beta!');
+  });
+
+  afterEach(async () => {
+    // Assert that there are no errors emitted from the browser
+    const logs = await browser.manage().logs().get(logging.Type.BROWSER);
+    expect(logs).not.toContain(jasmine.objectContaining({
+      level: logging.Level.SEVERE,
+    } as logging.Entry));
+  });
 });

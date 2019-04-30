@@ -2,7 +2,7 @@
 
 A open source progressive web app Pokedex built with Angular.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0-beta.8.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0-beta.18.
 
 ## Development server
 
