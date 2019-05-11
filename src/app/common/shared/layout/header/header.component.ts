@@ -10,5 +10,15 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.selector('.menu').addEventListener('click', () => {
+      this.selector('header').classList.toggle('side-bar-height');
+      this.selector('.menu').classList.toggle('open');
+      this.selector('header').classList.toggle('open');
+      this.selector('.overlay').classList.toggle('open');
+    });
+  }
+
+  selector(s) {
+    return document.querySelector(s);
   }
 }
