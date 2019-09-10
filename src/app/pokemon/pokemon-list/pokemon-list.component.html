@@ -2,7 +2,7 @@
 	<app-form-search (formChange)="search($event)"></app-form-search>
 </div>
 
-<div bp="grid 6 4@md 2@lg">
+<div bp="grid 12 6@sm 4@md 2@lg">
 	<a *ngFor="let p of pokemon | async" [routerLink]="['./', p.id]" class="card--media">
 		<i [class]="' sprite sprite-' + p.id"></i>
 		<div class="card--media__content">
