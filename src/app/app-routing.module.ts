@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 
 export const routes: Routes = [
-  { path: '', loadChildren: './pokemon/pokemon.module#PokemonModule' },
-  { path: 'about', loadChildren: './about/about.module#AboutModule' },
+  { path: '', loadChildren: () => import('./pokemon/pokemon.module').then(m => m.PokemonModule) },
+  { path: 'about', loadChildren: () => import('./about/about.module').then(m => m.AboutModule) },
 ];
 
 @NgModule({
