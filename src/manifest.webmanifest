@@ -4,9 +4,8 @@
   "theme_color": "#ef5350",
   "background_color": "#ef5350",
   "display": "standalone",
-  "orientation": "portrait",
-  "Scope": "/",
-  "start_url": "/",
+  "scope": "./",
+  "start_url": "./",
   "description":"A fast progressive web app Pokemon Pokédex",
   "icons": [
     {
@@ -49,6 +48,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "splash_pages": null
+  ]
 }
