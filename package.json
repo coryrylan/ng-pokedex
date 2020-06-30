@@ -7,12 +7,12 @@
     "start": "ng serve",
     "start:prod": "ng build --prod && lite-server --baseDir dist/ng-pokedex",
     "build": "ng build",
-    "build:prod": "npm run lint && ng build --prod --stats-json",
+    "build:prod": "npm run lint && ng build --prod --source-map",
     "test": "ng test",
     "lint": "sass-lint && ng lint",
     "e2e": "ng e2e",
     "deploy": "npm run build:prod && firebase deploy",
-    "bundle-report": "webpack-bundle-analyzer dist/ng-pokedex/stats.json"
+    "bundle-report": "source-map-explorer dist/ng-pokedex/**/*.js"
   },
   "private": true,
   "dependencies": {
@@ -31,6 +31,7 @@
     "blueprint-css": "^3.1.1",
     "normalize.css": "^8.0.1",
     "rxjs": "~6.5.5",
+    "source-map-explorer": "^2.4.2",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },
