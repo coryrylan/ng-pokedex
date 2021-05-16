@@ -1,0 +1,92 @@
+
+        <form  #Uform="ngForm" (ngSubmit)="Uform.form.valid && save(Uform.value)">
+            <div class="col-md-12 col-12">
+                <div class="row">
+            <div class="form-group col-md-2 col-12">
+                <label for="country">Country</label>
+                <select class="form-control" placeholder="Select Country" ngModel  #country="ngModel"   name="country" id="country" required  >
+                    <option value="0" >Select Country</option>
+                    <option *ngFor="let row of countries"  [value]="row">{{row}}</option>
+                </select>
+                <div *ngIf="Uform.submitted && !country.valid" class="error">
+                    <div *ngIf="country.errors">Country is required.</div>
+                </div>
+            </div>
+            
+            <div class="form-group col-md-2 col-12">
+                <label for="day">Name</label>
+                <input type="date" class="form-control" id="day"
+                       required #day="ngModel"
+                       ngModel name="day">
+                       <div *ngIf="Uform.submitted && day.invalid" class="error">
+                        <div *ngIf="day.errors">Day is required.</div>
+                    </div>
+              </div>
+              <div class=" col-md-2 btn">  
+                  <button  class="btn btn-success" type="submit" >Filter</button>
+              </div>
+              <div class=" col-md-2 btn">  
+                  <button  class="btn btn-danger" type="reset" (click)="reset()" >Reset</button>
+              </div>
+            </div>
+        </div>
+            </form>
+
+
+            
+<span>
+    <!-- Total- {{total}} -->
+  </span>
+  
+  <div class="col-12 col-md-12 container">
+    <div class="row">
+        <div *ngIf="isEmpty==true">
+            <p>No data found</p>
+        </div>
+        <div *ngIf="resdata && resdata.length > 0">
+            <div class="col-md-4 col-12 p-2" *ngFor="let data of resdata;let i=index">
+                <div class="card" >
+                  <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                  <div class="card-body">
+                    <h5 class="card-title"><b>Continent</b> {{data.continent}} </h5>
+                    <h6> <b>Date</b> {{data.time}}</h6>
+                    <h6 class="card-title"><b>Country</b> {{data.country}} </h6>
+                    <table class="table table-bordered table-responsive-md">
+                  <thead>
+                    <tr>
+                      <th>Recovered</th>
+                      <th>Active </th>
+                      <th>Critical </th>
+                      
+                      <th>Cases total</th>
+                      <th>Deaths New</th>
+                      <th>Deaths Total</th>
+                      <th>Tests Total</th>
+                      <th>population</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>{{data.cases.recovered}}</td>
+                      <td>{{data.cases.active}}</td>
+                      <td>{{data.cases.critical}}</td>
+                      <td>{{data.cases.total}}</td>
+                      <td>{{data.deaths.new}}</td>
+                      <td>{{data.deaths.total}}</td>
+                      <td>{{data.tests.total}}</td>
+                      <td>{{data.population}}</td>
+                   
+                    </tr>
+                  </tbody>
+                  
+                    </table>
+                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                  </div>
+                </div>
+              </div>
+        </div>
+  
+  </div>
+  
+  </div>
+  

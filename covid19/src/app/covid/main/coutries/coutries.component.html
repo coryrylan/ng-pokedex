@@ -1,0 +1,51 @@
+
+
+<!-- <div #map style="width:100%;height:400px"></div> -->
+
+
+  <div class="col-md-12 col-12">
+    <div class="row">
+      <div class="col-md-4">
+
+        <div>countries</div>
+        <br>
+        <br>
+        
+          <ul *ngFor="let c of countries">
+           <li> {{c}}</li>
+          </ul>
+      </div>
+      <div class="col-md-8">
+        <div class="container" style="max-width: 550px">
+          <h2 class="text-center mb-5">Login with Google</h2>
+        
+          <div *ngIf="isLoggedin === false">
+            <div>
+              <button type="button" (click)="loginWithGoogle()" class="btn btn-danger">Login with Google</button>
+            </div>
+          </div>
+        <br>
+        
+          <div *ngIf="isLoggedin === true">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" class="form-control" [value]="socialUser.firstName" id="firstname" readonly>
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" class="form-control" [value]="socialUser.lastName" id="lastname" readonly>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="text" class="form-control" [value]="socialUser.email" id="email" readonly>
+            </div>
+        
+            <button type="button" (click)="logOut()" class="btn btn-primary">Log Out</button>
+          </div>
+        </div>
+        
+        <div id="mapid"></div>
+        
+      </div>
+    </div>
+  </div>
