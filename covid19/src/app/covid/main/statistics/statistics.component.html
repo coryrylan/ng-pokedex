@@ -1,0 +1,49 @@
+
+<span>
+  Total- {{total}}
+</span>
+
+<div class="col-12 col-md-12 container">
+  <div class="row">
+    <div class="col-md-4 col-12 p-2" *ngFor="let data of statisData">
+  <div class="card" >
+    <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+    <div class="card-body">
+      <h5 class="card-title"><b>Continent</b> {{data.continent}} </h5>
+      <h6> <b>Date</b> {{data.time}}</h6>
+      <h6 class="card-title"><b>Country</b> {{data.country}} </h6>
+      <table class="table table-bordered table-responsive-md">
+    <thead>
+      <tr>
+        <th>Recovered</th>
+        <th>Active </th>
+        <th>Critical </th>
+        
+        <th>Cases total</th>
+        <th>Deaths New</th>
+        <th>Deaths Total</th>
+        <th>Tests Total</th>
+        <th>population</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{data.cases.recovered}}</td>
+        <td>{{data.cases.active}}</td>
+        <td>{{data.cases.critical}}</td>
+        <td>{{data.cases.total}}</td>
+        <td>{{data.deaths.new}}</td>
+        <td>{{data.deaths.total}}</td>
+        <td>{{data.tests.total}}</td>
+        <td>{{data.population}}</td>
+     
+      </tr>
+    </tbody>
+    
+      </table>
+      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    </div>
+  </div>
+</div>
+</div>
+</div>
