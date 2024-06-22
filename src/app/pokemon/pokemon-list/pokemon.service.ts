@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Observable, Subject } from 'rxjs';
-import { switchMap, startWith, tap, map } from 'rxjs/operators';
+import { switchMap, startWith, map } from 'rxjs/operators';
 
 import { Pokemon } from './../../common/interfaces/pokemon';
 import { PokemonDataService } from '../../common/services/pokemon-data.service';
