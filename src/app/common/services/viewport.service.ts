@@ -1,10 +1,14 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit  } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ViewportService {
+export class ViewportService OnInit  {
   constructor() { }
+
+  ngOnInit(){
+    console.log("viewport services")
+  }
 
   lockScroll() {
     // Temp until I can figure out the native renderer
@@ -26,3 +30,4 @@ export class ViewportService {
     }
   }
 }
+
