@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnDestroy, Output } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -9,10 +9,10 @@ import { Subscription } from 'rxjs';
 })
 export class FormSearchComponent implements OnDestroy {
   @Output() formChange = new EventEmitter<string>();
-  searchForm: FormGroup;
+  searchForm: UntypedFormGroup;
   subscriptions: Subscription[];
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: UntypedFormBuilder) {
     this.searchForm = this.formBuilder.group({
       search: ['']
     });
