@@ -26,11 +26,11 @@
     "@angular/router": "^14.3.0",
     "@angular/service-worker": "^14.3.0",
     "@ngx-lite/modal": "^0.5.7",
-    "@ngx-lite/nav-drawer": "^0.4.7",
+    "@ngx-lite/nav-drawer": "^14.0.0",
     "@ngx-lite/util": "0.0.1",
     "blueprint-css": "^3.1.1",
     "normalize.css": "^8.0.1",
-    "rxjs": "6.6",
+    "rxjs": "^6.6.0",
     "tslib": "^2.1.0",
     "zone.js": "~0.11.4"
   },

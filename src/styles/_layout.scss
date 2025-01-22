@@ -1,5 +1,6 @@
 @import './_config';
 
+
 body {
   background-color: $color-body;
 }
@@ -11,7 +12,7 @@ main {
 }
 
 $pokeball-size: 12rem;
-
+// math.div($pokeball-size, 6) or calc($pokeball-size / 6)
 /* Credit to: https://codepen.io/boltaway/pen/BjyFb */
 .pokeball {
   $pokeball-half: $pokeball-size / -2;
