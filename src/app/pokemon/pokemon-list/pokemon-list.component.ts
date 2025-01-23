@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { Pokemon } from './../../common/interfaces/pokemon';
@@ -11,15 +11,18 @@ import { PokemonService } from './pokemon.service';
   providers: [PokemonService]
 })
 export class PokemonListComponent {
+
   pokemon: Observable<Pokemon[]>;
   showGrid = true;
+
+  
 
   constructor(private pokemonService: PokemonService) {
     this.pokemonService.setTitle();
     this.pokemon = this.pokemonService.pokemon;
   }
-
+  
   search(term: string) {
     this.pokemonService.search(term);
-  }
+  };
 }
