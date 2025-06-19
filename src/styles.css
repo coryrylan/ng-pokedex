@@ -43,6 +43,7 @@ h1, h2, h3, p, a {
   margin: 0;
   text-box: trim-both cap alphabetic;
   color: var(--text-color);
+  font-weight: 300;
 }
 
 header {
@@ -79,24 +80,11 @@ header {
   }
 }
 
-footer {
-  background: var(--primary-background);
-  color: var(--primary-color);
-  padding: 6px 12px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-
-  a {
-    color: var(--primary-color);
-  }
-}
-
 main {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 24px;
+  padding: 18px;
   min-height: calc(100vh - 48px);
 }
 
@@ -125,7 +113,7 @@ ol {
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 12px;
 
   button {
@@ -172,10 +160,16 @@ ol {
   }
 }
 
+@media (width > 700px) {
+  ol {
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  }
+}
+
 dialog {
   background: var(--container-background);
   color: var(--text-color);
-  width: 100%;
+  width: calc(100% - 24px);
   max-width: 600px;
   min-height: 240px;
   border: 0;
@@ -192,6 +186,7 @@ dialog {
   }
 
   [popovertogglaction='close'] {
+    display: block;
     position: absolute;
     top: 6px;
     right: 6px;
@@ -200,12 +195,10 @@ dialog {
     color: var(--text-color-muted);
     font-size: 2rem;
     cursor: pointer;
+    border-radius: 6px;
     width: 36px;
     height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 6px;
+    padding: 0;
 
     &:hover {
       color: var(--color-text);
