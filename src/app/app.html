@@ -1,0 +1,59 @@
+<header>
+  <h1>NG-Pokédex</h1>
+  <button popovertarget="about">about</button>
+</header>
+
+<main>
+  <input type="search" placeholder="Search" aria-label="search" (input)="search($event)" />
+  <ol>
+    @for (pokemon of filteredPokemon(); track pokemon.id) {
+    <li>
+      <button popovertarget="details" (click)="activePokemon.set(pokemon)">
+        <i [class]="' sprite sprite-' + pokemon.id"></i>
+        <div>
+          <h3>{{ pokemon.name }}</h3>
+          <span>#{{ pokemon.id }}</span>
+        </div>
+      </button>
+    </li>
+    }
+  </ol>
+</main>
+
+<dialog id="details" popover>
+  <button popovertarget="details" popovertogglaction="close" aria-label="close">&times;</button>
+  @if (activePokemon() !== null) {
+    <div class="pokemon-details">
+      <i [class]="'sprite sprite-' + activePokemon()?.id"></i>
+      <div class="pokemon-content">
+        <h2>{{activePokemon()?.name}} #{{activePokemon()?.id}}</h2>
+        <div class="pokemon-types">
+          @for (type of activePokemon()?.types; track type) {
+            <span class="type" [class]="type">
+              {{type}}
+            </span>
+          }
+        </div>
+        <p>
+          <strong>Height:</strong> {{activePokemon()?.height}}m
+          <strong>Weight:</strong> {{activePokemon()?.weight}}kg
+        </p>
+        <p>{{activePokemon()?.description}}</p>
+      </div>
+    </div>
+  }
+</dialog>
+
+<dialog id="about" popover>
+  <button popovertarget="about" popovertogglaction="close" aria-label="close">&times;</button>
+  <p>An open source Pokédex</p>
+  <ul>
+    <li>Open Source built with <a href="https://angular.io">Angular</a></li>
+    <li>Data and sprites from the <a href="https://pokeapi.co/">https://pokeapi.co/</a> and <a href="http://pokemondb.net/">http://pokemondb.net/</a>. </li>
+    <li> Inspiration from <a href="https://www.pokedex.org/">https://www.pokedex.org/</a>. </li>
+  </ul>
+</dialog>
+
+<footer>
+  <a href="https://github.com/coryrylan/ng-pokedex">Open Source</a>&nbsp;built by&nbsp;<a href="https://coryrylan.com">Cory Rylan</a>&nbsp;All content is ©Nintendo, Game Freak, and The Pokémon Company.
+</footer>
