@@ -1,0 +1,248 @@
+@import './styles/sprites.css';
+@import './styles/types.css';
+
+:root {
+  color-scheme: light;
+  --primary-background: #bc3f3c;
+  --primary-color: #fff;
+  --text-color: #2d2d2d;
+  --text-color-muted: #676767;
+  --canvas-background: #e8e8e8;
+  --container-background: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --primary-color: #fff;
+    --text-color: #fff;
+    --text-color-muted: #9e9e9e;
+    --canvas-background: #1b1b1b;
+    --container-background: #2d2d2d;
+  }
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: var(--canvas-background);
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, p, a {
+  margin: 0;
+  text-box: trim-both cap alphabetic;
+  color: var(--text-color);
+}
+
+header {
+  background: var(--primary-background);
+  color: var(--primary-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 6px 12px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h1 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--primary-color);
+  }
+
+  button {
+    background: none;
+    color: var(--primary-color);
+    border: 0;
+    cursor: pointer;
+    padding: 0 12px;
+    height: 100%;
+
+    &:hover {
+      background: color-mix(in oklab, var(--primary-background), black 10%);
+    }
+  }
+}
+
+footer {
+  background: var(--primary-background);
+  color: var(--primary-color);
+  padding: 6px 12px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+
+  a {
+    color: var(--primary-color);
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  min-height: calc(100vh - 48px);
+}
+
+input[type='search'] {
+  background-color: initial;
+  border: none;
+  border-bottom: 1px solid #9e9e9e;
+  border-radius: 0;
+  outline: none;
+  height: 3rem;
+  width: 100%;
+  font-size: 1rem;
+  margin: 48px 0 0 0;
+  padding: 0;
+  box-shadow: none;
+  transition: all .3s;
+
+  &:focus {
+    border-bottom: 1px solid #ef5350;
+    box-shadow: 0 1px 0 0 #ef5350;
+  }
+}
+
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 12px;
+
+  button {
+    margin: 0;
+    width: 100%;
+    background: var(--container-background);
+    color: var(--text-color);
+    border: 0;
+    border-radius: 6px;
+    text-transform: capitalize;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 24px 12px 12px 12px;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all .3s;
+    }
+
+    div {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .sprite {
+      transform: scale(1.5);
+      margin: auto;
+    }
+
+    h3 {
+      display: inline-block;
+      font-weight: 600;
+    }
+
+    span {
+      display: inline-block;
+    }
+  }
+}
+
+dialog {
+  background: var(--container-background);
+  color: var(--text-color);
+  width: 100%;
+  max-width: 600px;
+  min-height: 240px;
+  border: 0;
+  padding: 48px 24px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+  &::backdrop {
+    background-color: hsla(0, 0%, 0%, 0.5);
+  }
+
+  h2 {
+    text-transform: capitalize;
+  }
+
+  [popovertogglaction='close'] {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: none;
+    border: 0;
+    color: var(--text-color-muted);
+    font-size: 2rem;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+
+    &:hover {
+      color: var(--color-text);
+    }
+  }
+}
+
+[popover] {
+  transition: opacity 200ms ease-out, display 300ms allow-discrete;
+  opacity: 0;
+}
+
+[popover]:popover-open {
+  opacity: 1;
+
+  @starting-style {
+    opacity: 0;
+  }
+}
+
+.pokemon-details {
+  display: grid;
+  gap: 24px;
+
+  .sprite {
+    transform: scale(2);
+    margin: auto;
+  }
+
+  .pokemon-content {
+    display: flex;
+    gap: 18px;
+    flex-direction: column;
+  }
+
+  .pokemon-types {
+    display: flex;
+    gap: 6px;
+  }
+}
