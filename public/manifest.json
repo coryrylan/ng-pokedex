@@ -1,8 +1,8 @@
 {
-  "name": "NG-Pokédex",
-  "short_name": "NG-Pokédex",
-  "theme_color": "#ef5350",
-  "background_color": "#ef5350",
+  "name": "Pokédex",
+  "short_name": "Pokédex",
+  "theme_color": "#bc3f3c",
+  "background_color": "#bc3f3c",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
