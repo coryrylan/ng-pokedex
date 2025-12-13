@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, inject } from '@angular/core';
 import { signal } from '@angular/core';
 import { Pokemon } from '../common/types';
@@ -8,7 +8,7 @@ import { PokemonService } from '../common/pokemon.service';
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.css',
-  imports: [CommonModule]
+  imports: []
 })
 export class App {
   #pokemonService = inject(PokemonService);
